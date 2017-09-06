@@ -13,7 +13,7 @@ deploy:
   acl: public_read
   region: ap-southeast-1
   on:
-    branch: ci-cloudfront-invalidations
+    branch: master
 after_deploy:
   - aws configure set preview.cloudfront true
   - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
