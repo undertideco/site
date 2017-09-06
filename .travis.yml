@@ -1,7 +1,10 @@
-language: node_js
-node_js:
-- 8.4.0
-script: echo Hi
+language: python
+python:
+  - "3.5"
+install:
+  - pip install awscli
+script: 
+  - echo Hi
 deploy:
   provider: s3
   access_key_id: $AWS_ACCESS_KEY_ID
@@ -10,4 +13,7 @@ deploy:
   acl: public_read
   region: ap-southeast-1
   on:
-    branch: master
+    branch: ci-cloudfront-invalidations
+after_deploy:
+  - aws configure set preview.cloudfront true
+  - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
