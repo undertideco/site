@@ -10,4 +10,4 @@ deploy:
   acl: public_read
   region: ap-southeast-1
   on:
-    branch: add-ci
+    branch: master
