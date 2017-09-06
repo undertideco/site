@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+- 8.4.0
+deploy:
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  bucket: 'undertide.co'
+  acl: public_read
+  region: ap-southeast-1
+  on:
+    branch: add-ci
