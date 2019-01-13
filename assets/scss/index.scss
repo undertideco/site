@@ -48,15 +48,8 @@ body {
     }
 
     .project {
-      display: grid;
-      grid-template-areas:
-        "banner-image"
-        "title"
-        "owner"
-        "summary";
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr auto auto auto;
-      grid-row-gap: 8px;
+      display: flex;
+      flex-direction: column;
 
       @media #{$mq-not-phone} {
         flex-basis: calc(50% - 40px);
@@ -65,13 +58,12 @@ body {
       }
 
       &__banner {
-        grid-area: banner-image;
         object-fit: cover;
         width: 100%;
+        margin-bottom: 8px;
       }
 
       &__title {
-        grid-area: title;
         font-size: 18px;
         line-height: 22px;
         font-weight: 700;
@@ -79,18 +71,16 @@ body {
       }
 
       &__owner {
-        grid-area: owner;
         color: rgba(15,59,87,70%);
         font-size: 18px;
         line-height: 27px;
       }
 
       &__summary {
-        grid-area: summary;
         font-size: 18px;
         line-height: 22px;
         color: #737272;
-        margin: 0;
+        margin-bottom: 8px;
       }
     }
   }
