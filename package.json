@@ -12,5 +12,8 @@
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html"
+  },
+  "dependencies": {
+    "typed.js": "^2.0.9"
   }
 }
