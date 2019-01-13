@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 body {
   background-color: #F2FCFB;
   font-family: Helvetica, 'Segoe UI', sans-serif;
@@ -6,6 +8,10 @@ body {
 
 .container {
   margin: 32px 21px;
+
+  @media #{$mq-not-phone} {
+    margin: 41px 39px;
+  }
 
   &__logo {
     width: 50px;
@@ -23,12 +29,23 @@ body {
     font-size: 18px;
     line-height: 27px;
     color: #1F3040;
+
+    @media #{$mq-not-phone} {
+      max-width: 60%;
+    }
   }
 
   &__projects {
     display: grid;
     grid-auto-flow: row;
     grid-row-gap: 32px;
+
+    @media #{$mq-not-phone} {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 15%;
+      justify-content: center;
+    }
 
     .project {
       display: grid;
@@ -40,6 +57,12 @@ body {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr auto auto auto;
       grid-row-gap: 8px;
+
+      @media #{$mq-not-phone} {
+        flex-basis: calc(50% - 40px);
+        flex-shrink: 0;
+        margin: 0 20px;
+      }
 
       &__banner {
         grid-area: banner-image;
@@ -80,7 +103,11 @@ body {
 
   background-color: #0C2741;
   color: white;
-  padding: 21px 31px;
+  padding: 31px 21px 231px 21px;
+
+  @media #{$mq-not-phone} {
+    justify-items: center;
+  }
 
   &__title {
     font-size: 28px;
