@@ -27,6 +27,21 @@ body {
     @media #{$mq-not-phone} {
       margin-top: 18px;
     }
+
+    &__break {
+      &_mobile {
+        @media #{$mq-not-phone} {
+          display: none;
+        }
+      }
+
+      &_desktop {
+        display: none;
+        @media #{$mq-not-phone} {
+          display: initial;
+        }
+      }
+    }
   }
 
   &__copy {
