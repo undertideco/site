@@ -1,0 +1,103 @@
+body {
+  background-color: #F2FCFB;
+  font-family: Helvetica, 'Segoe UI', sans-serif;
+  margin: 0;
+}
+
+.container {
+  margin: 32px 21px;
+
+  &__logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  &__title {
+    font-size: 60px;
+    line-height: 76px;
+    font-weight: 700;
+    color: #0C2741;
+  }
+
+  &__copy {
+    font-size: 18px;
+    line-height: 27px;
+    color: #1F3040;
+  }
+
+  &__projects {
+    display: grid;
+    grid-auto-flow: row;
+    grid-row-gap: 32px;
+
+    .project {
+      display: grid;
+      grid-template-areas:
+        "banner-image"
+        "title"
+        "owner"
+        "summary";
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr auto auto auto;
+      grid-row-gap: 8px;
+
+      &__banner {
+        grid-area: banner-image;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      &__title {
+        grid-area: title;
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 700;
+        color: #0C2741;
+      }
+
+      &__owner {
+        grid-area: owner;
+        color: #0F3B57;
+        font-size: 18px;
+        line-height: 27px;
+      }
+
+      &__summary {
+        grid-area: summary;
+        font-size: 18px;
+        line-height: 22px;
+        color: #737272;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.contact {
+  display: grid;
+  grid-auto-flow: row;
+  grid-row-gap: 16px;
+
+  background-color: #0C2741;
+  color: white;
+  padding: 21px 31px;
+
+  &__title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #F2FCFB;
+  }
+
+  &__tagline {
+    font-size: 22px;
+    color: #F2FCFB;
+
+    a {
+      color: #F2FCFB;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
