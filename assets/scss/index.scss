@@ -1,5 +1,13 @@
 @import "./variables.scss";
 
+$body-margin-top: 32px;
+$body-margin-horizontal: 21px;
+
+@media #{$mq-not-phone} {
+  $body-margin-top: 41px;
+  $body-margin-horizontal: 39px;
+}
+
 body {
   background-color: #F2FCFB;
   font-family: Helvetica, 'Segoe UI', sans-serif;
@@ -25,6 +33,12 @@ body {
   border: 2.5px solid var(--button-bg);
   transition: all 20ms ease-in-out;
 
+  margin: 0 auto;
+
+  @media #{$mq-not-phone} {
+    margin: unset;
+  }
+
   &:hover {
     background-color: white;
     color: var(--button-bg);
@@ -32,24 +46,22 @@ body {
 }
 
 .container {
-  margin: 32px 21px 0px 21px;
-
-  @media #{$mq-not-phone} {
-    margin: 41px 39px 0px 39px;
-  }
+  margin: $body-margin-top $body-margin-horizontal 0px $body-margin-horizontal;
 
   &__logo {
     width: 50px;
   }
 
   &__title {
-    font-size: 80px;
+    font-size: 60px;
     font-weight: 700;
+    line-height: 78px;
     color: #0C2741;
-    margin-top: 14px;
+    margin-top: 32px;
 
     @media #{$mq-not-phone} {
-      margin-top: 32px;
+      font-size: 80px;
+      line-height: 95px;
     }
 
     &__break {
@@ -69,40 +81,50 @@ body {
   }
 
   &__copy {
-    font-size: 23px;
-    line-height: 30px;
+    font-size: 18px;
+    line-height: 27px;
     color: #5F6B7A;
 
     @media #{$mq-not-phone} {
+      font-size: 23px;
+      line-height: 30px;
       max-width: 671px;
     }
+  }
+
+  #projects-link {
+    margin-top: 32px;
   }
 
   &__skills {
     background-color: white;
     box-shadow: 8px 4px 4px 0 rgba(0,0,0,0.10);
+    margin: 64px (-$body-margin-horizontal);
+    padding: $body-margin-horizontal;
 
     @media #{$mq-not-phone} {
-      margin: 64px -39px;
-      padding: 39px calc(39px + 50%) 39px 39px;
+      padding-right: calc(#{$body-margin-horizontal} + 50%);
     }
 
     &__title {
-      font-size: 52px;
+      font-size: 40px;
       font-weight: 700;
       color: #1F3040;
 
       @media #{$mq-not-phone} {
+        font-size: 52px;
         max-width: 639px;
       }
     }
 
     &__description {
-      font-size: 23px;
-      line-height: 30px;
+      font-size: 18px;
+      line-height: 24px;
       color: #737272;
 
       @media #{$mq-not-phone} {
+        font-size: 23px;
+        line-height: 30px;
         max-width: 563px;
       }
     }
@@ -113,6 +135,7 @@ body {
         "mobile"
         "webdev"
         "games";
+      grid-row-gap: 14px;
 
       @media #{$mq-not-phone} {
         grid-template-areas:
@@ -127,9 +150,13 @@ body {
           "icon title"
           "nada list";
         grid-template-columns: 31px 1fr;
-        grid-row-gap: 8px;
+        grid-row-gap: 5px;
         grid-column-gap: 8px;
         align-items: center;
+
+        @media #{$mq-not-phone} {
+          grid-row-gap: 8px;
+        }
 
         &__icon {
           grid-area: icon;
@@ -137,9 +164,13 @@ body {
 
         &__title {
           grid-area: title;
-          font-size: 16px;
+          font-size: 12px;
           font-weight: 700;
           text-transform: uppercase;
+
+          @media #{$mq-not-phone} {
+            font-size: 16px;
+          }
         }
   
         &__list {
@@ -150,8 +181,13 @@ body {
   
           li {
             color: #737272;
-            font-size: 16px;
-            line-height: 175%;
+            font-size: 12px;
+            line-height: 18px;
+
+            @media #{$mq-not-phone} {
+              font-size: 16px;
+              line-height: 175%;
+            }
           }
         }
 
@@ -181,7 +217,7 @@ body {
 
   background-color: #0C2741;
   color: white;
-  padding: 46px 0px;
+  padding: 46px 16px;
 
   @media #{$mq-not-phone} {
     justify-items: center;
@@ -196,7 +232,10 @@ body {
   &__tagline {
     font-size: 22px;
     color: #F2FCFB;
-    margin-bottom: 38px;
+
+    @media #{$mq-not-phone} {
+      font-size: 28px;
+    }
 
     a {
       color: #F2FCFB;
@@ -205,5 +244,17 @@ body {
         text-decoration: none;
       }
     }
+  }
+
+  #contact-link {
+    margin-top: 47px;
+
+    @media #{$mq-not-phone} {
+      margin-top: 38px;
+    }
+  }
+
+  .underline {
+    text-decoration: underline;
   }
 }
