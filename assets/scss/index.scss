@@ -6,11 +6,36 @@ body {
   margin: 0;
 }
 
+.link {
+  text-decoration: none;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--button-bg);
+  border-radius: 3px;
+  width: 297px;
+  height: 51px;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  border: 2.5px solid var(--button-bg);
+  transition: all 20ms ease-in-out;
+
+  &:hover {
+    background-color: white;
+    color: var(--button-bg);
+  }
+}
+
 .container {
-  margin: 32px 21px;
+  margin: 32px 21px 0px 21px;
 
   @media #{$mq-not-phone} {
-    margin: 41px 39px;
+    margin: 41px 39px 0px 39px;
   }
 
   &__logo {
@@ -18,14 +43,13 @@ body {
   }
 
   &__title {
-    font-size: 60px;
-    line-height: 76px;
+    font-size: 80px;
     font-weight: 700;
     color: #0C2741;
     margin-top: 14px;
 
     @media #{$mq-not-phone} {
-      margin-top: 18px;
+      margin-top: 32px;
     }
 
     &__break {
@@ -45,66 +69,106 @@ body {
   }
 
   &__copy {
-    font-size: 18px;
-    line-height: 27px;
-    color: #1F3040;
+    font-size: 23px;
+    line-height: 30px;
+    color: #5F6B7A;
 
     @media #{$mq-not-phone} {
-      max-width: 60%;
+      max-width: 671px;
     }
   }
 
-  &__projects {
-    display: grid;
-    grid-auto-flow: row;
-    grid-row-gap: 35px;
-    margin-top: 30px;
+  &__skills {
+    background-color: white;
+    box-shadow: 8px 4px 4px 0 rgba(0,0,0,0.10);
 
     @media #{$mq-not-phone} {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 0 15%;
-      justify-content: center;
-      margin-top: 80px;
-      align-items: flex-start;
-      grid-row-gap: unset;
+      margin: 64px -39px;
+      padding: 39px calc(39px + 50%) 39px 39px;
     }
 
-    .project {
-      display: flex;
-      flex-direction: column;
+    &__title {
+      font-size: 52px;
+      font-weight: 700;
+      color: #1F3040;
 
       @media #{$mq-not-phone} {
-        flex-basis: calc(50% - 115px);
-        flex-shrink: 0;
-        margin: 0 57.5px 80px 57.5px;
+        max-width: 639px;
+      }
+    }
+
+    &__description {
+      font-size: 23px;
+      line-height: 30px;
+      color: #737272;
+
+      @media #{$mq-not-phone} {
+        max-width: 563px;
+      }
+    }
+
+    &__list {
+      display: grid;
+      grid-template-areas:
+        "mobile"
+        "webdev"
+        "games";
+
+      @media #{$mq-not-phone} {
+        grid-template-areas:
+          "webdev games"
+          "mobile nada";
+        grid-row-gap: 32px;
       }
 
-      &__banner {
-        object-fit: cover;
-        width: 100%;
-        margin-bottom: 8px;
-      }
+      .skill {
+        display: grid;
+        grid-template-areas:
+          "icon title"
+          "nada list";
+        grid-template-columns: 31px 1fr;
+        grid-row-gap: 8px;
+        grid-column-gap: 8px;
+        align-items: center;
 
-      &__title {
-        font-size: 18px;
-        line-height: 22px;
-        font-weight: 700;
-        color: #0C2741;
-      }
+        &__icon {
+          grid-area: icon;
+        }
 
-      &__owner {
-        color: rgba(15,59,87,70%);
-        font-size: 18px;
-        line-height: 27px;
-      }
+        &__title {
+          grid-area: title;
+          font-size: 16px;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+  
+        &__list {
+          grid-area: list;
+          margin: 0;
+          padding: 0;
+          list-style: none;
+  
+          li {
+            color: #737272;
+            font-size: 16px;
+            line-height: 175%;
+          }
+        }
 
-      &__summary {
-        font-size: 18px;
-        line-height: 22px;
-        color: #737272;
-        margin-top: 2px;
-        margin-bottom: 0px;
+        &.webdev {
+          grid-area: webdev;
+          color: #1B929B;
+        }
+
+        &.games {
+          grid-area: games;
+          color: #C23230;
+        }
+
+        &.mobile {
+          grid-area: mobile;
+          color: #4298CC;
+        }
       }
     }
   }
@@ -117,7 +181,7 @@ body {
 
   background-color: #0C2741;
   color: white;
-  padding: 31px 21px 231px 21px;
+  padding: 46px 0px;
 
   @media #{$mq-not-phone} {
     justify-items: center;
@@ -132,6 +196,7 @@ body {
   &__tagline {
     font-size: 22px;
     color: #F2FCFB;
+    margin-bottom: 38px;
 
     a {
       color: #F2FCFB;
