@@ -1,7 +1,5 @@
 import Typed from 'typed.js';
 
-import '../scss/index.scss';
-
 const options = {
   strings: ['reality.', 'success.', 'delight.'],
   typeSpeed: 40,
