@@ -92,3 +92,52 @@ body {
     }
   }
 }
+
+.contact {
+  display: grid;
+  grid-auto-flow: row;
+  grid-row-gap: 16px;
+
+  background-color: #0C2741;
+  color: white;
+  padding: 46px 16px;
+
+  @media #{$mq-not-phone} {
+    justify-items: center;
+  }
+
+  &__title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #F2FCFB;
+  }
+
+  &__tagline {
+    font-size: 22px;
+    color: #F2FCFB;
+
+    @media #{$mq-not-phone} {
+      font-size: 28px;
+    }
+
+    a {
+      color: #F2FCFB;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  #contact-link {
+    margin-top: 47px;
+
+    @media #{$mq-not-phone} {
+      margin-top: 38px;
+    }
+  }
+
+  .underline {
+    text-decoration: underline;
+  }
+}
