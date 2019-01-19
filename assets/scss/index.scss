@@ -5,6 +5,18 @@
     margin-top: 32px;
   }
 
+  &__hero {
+    padding: none;
+
+    @media #{$mq-not-phone} {
+      padding: .5rem 3rem .5rem 3rem;
+    }
+
+    @media #{$mq-not-tablet} {
+      padding: .5rem 9rem .5rem 9rem;
+    }
+  }
+
   &__skills {
     background-color: white;
     box-shadow: 8px 4px 4px 0 rgba(0,0,0,0.10);
@@ -12,7 +24,11 @@
     padding: $body-margin-horizontal;
 
     @media #{$mq-not-phone} {
-      padding-right: calc(100% - #{$body-margin-horizontal} - 600px);
+      padding: 3rem 3rem 3rem 3rem;
+    }
+
+    @media #{$mq-not-tablet} {
+      padding: 3rem 9rem 3rem 9rem;
     }
 
     &__title {
