@@ -67,11 +67,6 @@ body {
         font-size: 18px;
         color: #5F6B7A;
         text-align: left;
-        text-decoration: none;
-
-        &:hover {
-          text-decoration: underline;
-        }
 
         .link {
           color: #F59369;
@@ -80,6 +75,14 @@ body {
 
           @media #{$mq-not-phone} {
             display: none;
+          }
+        }
+
+        &:not(.link) {
+          text-decoration: none;
+
+          &:hover {
+            text-decoration: underline;
           }
         }
       }
