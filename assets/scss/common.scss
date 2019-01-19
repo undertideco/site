@@ -30,8 +30,7 @@ body {
   font-weight: 700;
   font-size: 16px;
   text-decoration: none;
-  border: 2.5px solid var(--button-bg);
-  transition: all 20ms ease-in-out;
+  transition: background-color 150ms ease-in-out, box-shadow 300ms ease-in-out;
 
   margin: 0 auto;
 
@@ -40,8 +39,15 @@ body {
   }
 
   &:hover {
-    background-color: white;
-    color: var(--button-bg);
+    background-color: #4D7FBD;
+  }
+
+  &.work-button {
+    background-color: #F59369;
+  
+    &:hover {
+      background-color: #E88B64;
+    }
   }
 }
 
