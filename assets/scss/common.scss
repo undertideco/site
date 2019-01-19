@@ -48,8 +48,52 @@ body {
 .container {
   margin: $body-margin-top $body-margin-horizontal 0px $body-margin-horizontal;
 
-  &__logo {
-    width: 50px;
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo {
+      width: 50px;
+    }
+
+    &__menu {
+      display: grid;
+      grid-auto-flow: column;
+      grid-column-gap: 20px;
+      align-items: center;
+
+      a {
+        font-size: 18px;
+        color: #5F6B7A;
+        text-align: left;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        .link {
+          color: #F59369;
+          text-align: left;
+          text-decoration: underline;
+
+          @media #{$mq-not-phone} {
+            display: none;
+          }
+        }
+      }
+
+      .button {
+        display: none;
+
+        @media #{$mq-not-phone} {
+          display: flex;
+          width: 207px;
+          margin-left: 12px;
+        }
+      }
+    }
   }
 
   &__title {
