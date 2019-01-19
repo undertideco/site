@@ -11,10 +11,6 @@
     @media #{$mq-not-phone} {
       padding: .5rem 3rem .5rem 3rem;
     }
-
-    @media #{$mq-not-tablet} {
-      padding: .5rem 9rem .5rem 9rem;
-    }
   }
 
   &__skills {
@@ -28,7 +24,7 @@
     }
 
     @media #{$mq-not-tablet} {
-      padding: 3rem 9rem 3rem 9rem;
+      padding: 3rem 4rem 3rem 4rem;
     }
 
     &__title {
