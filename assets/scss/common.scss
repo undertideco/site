@@ -30,8 +30,7 @@ body {
   font-weight: 700;
   font-size: 16px;
   text-decoration: none;
-  border: 2.5px solid var(--button-bg);
-  transition: all 20ms ease-in-out;
+  transition: background-color 150ms ease-in-out, box-shadow 300ms ease-in-out;
 
   margin: 0 auto;
 
@@ -40,9 +39,20 @@ body {
   }
 
   &:hover {
-    background-color: white;
-    color: var(--button-bg);
+    background-color: #4D7FBD;
   }
+
+  &.work-button {
+    background-color: #F59369;
+  
+    &:hover {
+      background-color: #E88B64;
+    }
+  }
+}
+
+nav {
+  margin: $body-margin-top $body-margin-horizontal 0px $body-margin-horizontal;
 }
 
 .container {
@@ -128,12 +138,13 @@ body {
   }
 
   &__copy {
-    font-size: 18px;
-    line-height: 27px;
+    font-size: 1em;
+    line-height: 1.5em;
     color: #5F6B7A;
+    font-weight: 300;
 
     @media #{$mq-not-phone} {
-      font-size: 23px;
+      font-size: 1.25em;
       line-height: 30px;
       max-width: 671px;
     }

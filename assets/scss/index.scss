@@ -5,6 +5,14 @@
     margin-top: 32px;
   }
 
+  &__hero {
+    padding: none;
+
+    @media #{$mq-not-phone} {
+      padding: .5rem 3rem .5rem 3rem;
+    }
+  }
+
   &__skills {
     background-color: white;
     box-shadow: 8px 4px 4px 0 rgba(0,0,0,0.10);
@@ -12,7 +20,11 @@
     padding: $body-margin-horizontal;
 
     @media #{$mq-not-phone} {
-      padding-right: calc(100% - #{$body-margin-horizontal} - 600px);
+      padding: 3rem 3rem 3rem 3rem;
+    }
+
+    @media #{$mq-not-tablet} {
+      padding: 3rem 4rem 3rem 4rem;
     }
 
     &__title {
@@ -27,13 +39,12 @@
     }
 
     &__description {
-      font-size: 18px;
-      line-height: 24px;
+      font-size: 1.25em;
+      line-height: 1.5em;
+      font-weight: 300;
       color: #737272;
 
       @media #{$mq-not-phone} {
-        font-size: 23px;
-        line-height: 30px;
         max-width: 563px;
       }
     }
@@ -73,7 +84,7 @@
 
         &__title {
           grid-area: title;
-          font-size: 12px;
+          font-size: 1em;
           font-weight: 700;
           text-transform: uppercase;
 
@@ -90,8 +101,8 @@
   
           li {
             color: #737272;
-            font-size: 12px;
-            line-height: 18px;
+            font-size: 1em;
+            line-height: 1.7em;
 
             @media #{$mq-not-phone} {
               font-size: 16px;
