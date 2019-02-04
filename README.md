@@ -1,6 +1,6 @@
 # Undertide Landing Site
 [![Build Status](https://travis-ci.org/undertideco/site.svg?branch=master)](https://travis-ci.org/undertideco/site)
 
-If you think this site is supposed to look **super** impressive, it's actually the complete opposite made in 2 minutes with [Skeleton](http://getskeleton.com/)
-
 Live site: http://undertide.co/
+
+![site photo](https://user-images.githubusercontent.com/5944973/52185651-a6ad7a80-285c-11e9-827f-e98a1ff1169f.png)
