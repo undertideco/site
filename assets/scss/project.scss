@@ -1,6 +1,7 @@
 @import './common.scss';
 
-$project-item-margin: 9px;
+$project-item-margin-mobile: 9px;
+$project-item-margin-desktop: 57.5px;
 
 .container {
   &__copy {
@@ -29,9 +30,9 @@ $project-item-margin: 9px;
       flex-direction: column;
 
       @media #{$mq-not-phone} {
-        flex-basis: calc(50% - #{$project-item-margin} - #{$project-item-margin});
+        flex-basis: calc(50% - #{$project-item-margin-desktop} - #{$project-item-margin-desktop});
         flex-shrink: 0;
-        margin: $project-item-margin $project-item-margin;
+        margin: $project-item-margin-desktop;
       }
 
       &__banner {
