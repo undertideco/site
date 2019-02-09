@@ -5,14 +5,6 @@
     margin-top: 32px;
   }
 
-  &__hero {
-    padding: none;
-
-    @media #{$mq-not-phone} {
-      padding: .5rem 3rem .5rem 3rem;
-    }
-  }
-
   &__skills {
     background-color: white;
     box-shadow: 8px 4px 4px 0 rgba(0,0,0,0.10);

@@ -109,6 +109,14 @@ nav {
     }
   }
 
+  &__hero {
+    padding: none;
+
+    @media #{$mq-not-phone} {
+      padding: .5rem 3rem .5rem 3rem;
+    }
+  }
+
   &__title {
     font-size: 60px;
     font-weight: 700;
