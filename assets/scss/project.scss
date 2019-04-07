@@ -22,7 +22,7 @@ $project-item-margin: .5rem;
     grid-row-gap: 35px;
     margin: 26px 0px 64px 0px;
 
-    @media #{$mq-not-phone} {
+    @media #{$mq-not-phone}, #{$mq-not-tablet} {
       display: flex;
       flex-wrap: wrap;
       padding: .5rem 3rem .5rem 3rem;
