@@ -8,7 +8,7 @@
   &__hero {
     padding: none;
 
-    @media #{$mq-not-phone} {
+    @media #{$mq-not-phone}, #{$mq-not-tablet} {
       padding: .5rem 3rem .5rem 3rem;
     }
   }
@@ -32,7 +32,7 @@
       font-weight: 700;
       color: #1F3040;
 
-      @media #{$mq-not-phone} {
+      @media #{$mq-not-phone}, #{$mq-not-tablet} {
         font-size: 52px;
         max-width: 639px;
       }
@@ -44,7 +44,7 @@
       font-weight: 300;
       color: #737272;
 
-      @media #{$mq-not-phone} {
+      @media #{$mq-not-phone}, #{$mq-not-tablet} {
         max-width: 563px;
       }
     }
@@ -57,7 +57,7 @@
         "games";
       grid-row-gap: 14px;
 
-      @media #{$mq-not-phone} {
+      @media #{$mq-not-phone}, #{$mq-not-tablet} {
         grid-template-areas:
           "webdev games"
           "mobile nada";
@@ -74,7 +74,7 @@
         grid-column-gap: 8px;
         align-items: center;
 
-        @media #{$mq-not-phone} {
+        @media #{$mq-not-phone}, #{$mq-not-tablet} {
           grid-row-gap: 8px;
         }
 
@@ -88,7 +88,7 @@
           font-weight: 700;
           text-transform: uppercase;
 
-          @media #{$mq-not-phone} {
+          @media #{$mq-not-phone}, #{$mq-not-tablet} {
             font-size: 16px;
           }
         }
@@ -104,7 +104,7 @@
             font-size: 1em;
             line-height: 1.7em;
 
-            @media #{$mq-not-phone} {
+            @media #{$mq-not-phone}, #{$mq-not-tablet} {
               font-size: 16px;
               line-height: 175%;
             }
