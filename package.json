@@ -11,7 +11,7 @@
   },
   "scripts": {
     "start": "parcel index.html projects.html",
-    "build": "parcel build index.html projects.html --public-url https://undertide.co"
+    "build": "parcel build index.html projects.html"
   },
   "dependencies": {
     "typed.js": "^2.0.9"
