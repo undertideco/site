@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import logo from '../images/logo.png';
 import Button from './button';
+import StyledAnchor from './styled-anchor';
 
 const Wrapper = styled.header`
   margin: 32px 21px 0px 21px;
@@ -29,7 +30,7 @@ const Menu = styled.div`
   align-items: center;
 `;
 
-const MenuLink = styled.a`
+const MenuLink = styled(Link)`
   font-size: 18px;
   color: #5f6b7a;
   text-align: left;
@@ -41,13 +42,7 @@ const MenuLink = styled.a`
 `;
 
 const WorkTogetherButton = styled(Button)`
-  color: #fff;
-  background-color: #f59369;
-
-  &:hover {
-    cursor: pointer;
-    background-color: #e88b64;
-  }
+  width: 207px;
 
   display: none;
 
@@ -70,10 +65,10 @@ const Header = ({ siteTitle }) => (
     <Menu>
       <MenuLink href="/">Home</MenuLink>
       <MenuLink href="/projects">Work</MenuLink>
-      <MenuLink href="mailto:hello@undertide.co">
+      <StyledAnchor href="mailto:hello@undertide.co">
         <HireUsText>Hire Us</HireUsText>
         <WorkTogetherButton>Let&apos;s Work Together</WorkTogetherButton>
-      </MenuLink>
+      </StyledAnchor>
     </Menu>
   </Wrapper>
 );

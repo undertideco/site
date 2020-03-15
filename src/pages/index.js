@@ -20,6 +20,7 @@ import Skill, {
 import webdev from '../images/webdev.svg';
 import games from '../images/games.svg';
 import mobile from '../images/mobile.svg';
+import StyledLink from '../components/styled-link';
 
 const Hero = styled.div`
   padding: 0;
@@ -35,10 +36,8 @@ const StyledLargeTitle = styled(LargeTitle)`
 
 const SeeOurWorkButton = styled(Button)`
   background-color: #5286c7;
-  color: white;
 
   &:hover {
-    cursor: pointer;
     background-color: #4d7fbd;
   }
 `;
@@ -89,9 +88,9 @@ const IndexPage = () => (
         users off their feet. Since then, individuals and companies have
         approached us to do the same for their customers.
       </BodyText>
-      <Link to="/projects">
+      <StyledLink to="/projects">
         <SeeOurWorkButton>See our work</SeeOurWorkButton>
-      </Link>
+      </StyledLink>
     </Hero>
     <SkillsContainer>
       <SkillsTagline>A team with the skills you need.</SkillsTagline>
