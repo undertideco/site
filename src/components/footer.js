@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
+import { useLocation } from '@reach/router';
 import Button from './button';
 import StyledAnchor from './styled-anchor';
 
@@ -46,14 +47,23 @@ const Underline = styled.span`
 `;
 
 function Footer() {
+  const location = useLocation();
+  const isProjectsPage = location.pathname === '/projects';
+
   return (
     <Wrapper>
-      <Title>Now that we have introduced ourselves...</Title>
-      <Tagline>
-        Let us hear more about&nbsp;
-        <Underline>you</Underline>
+      <Title>
+        {isProjectsPage
+          ? 'Curious how we made these?'
+          : 'Now that we have introduced ourselves...'}
+      </Title>
+      {!isProjectsPage && (
+        <Tagline>
+          Let us hear more about&nbsp;
+          <Underline>you</Underline>
 !
 </Tagline>
+      )}
       <StyledAnchor href="mailto:hello@undertide.co">
         <Button>Build something together</Button>
       </StyledAnchor>
