@@ -6,6 +6,7 @@ import breakpoint from 'styled-components-breakpoint';
 import logo from '../images/logo.png';
 import Button from './button';
 import StyledAnchor from './styled-anchor';
+import StyledLink from './styled-link';
 
 const Wrapper = styled.header`
   margin: 32px 21px 0px 21px;
@@ -59,9 +60,11 @@ const HireUsText = styled.span`
   `}
 `;
 
-const Header = ({ siteTitle }) => (
+const Header = () => (
   <Wrapper>
-    <Logo src={logo} alt="Logo of Undertide" />
+    <StyledLink to="/">
+      <Logo src={logo} alt="Logo of Undertide" />
+    </StyledLink>
     <Menu>
       <MenuLink to="/">Home</MenuLink>
       <MenuLink to="/projects">Work</MenuLink>
