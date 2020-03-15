@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Undertide Apps',
     description: 'Undertide Apps is a software consultancy based in Singapore.',
-    author: `@undertide`,
+    author: `@undertideco`,
     siteURL: 'https://undertide.co',
   },
   plugins: [

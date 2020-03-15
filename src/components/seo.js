@@ -29,6 +29,23 @@ function SEO({ description, lang, meta, title }) {
 
   const metaDescription = description || site.siteMetadata.description;
 
+  const jsonLDSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Undertide Apps',
+    description: metaDescription,
+    url: site.siteMetadata.siteURL,
+    logo: resolve(site.siteMetadata.siteURL, 'logo-meta.png'),
+    sameAs: [
+      'https://in.linkedin.com/company/undertide-apps',
+      'https://twitter.com/undertideco',
+    ],
+    contactPoint: {
+      '@type': 'ContactPoint',
+      email: 'hello@undertide.co',
+    },
+  };
+
   return (
     <Helmet
       htmlAttributes={{
@@ -86,7 +103,9 @@ function SEO({ description, lang, meta, title }) {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <script type="application/ld+json">{JSON.stringify(jsonLDSchema)}</script>
+    </Helmet>
   );
 }
 
