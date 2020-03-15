@@ -14,7 +14,6 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.0 || ^1.7.0"
-    
   },
   "scripts": {
     "build": "gatsby build",
@@ -23,10 +22,8 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "gatsby-cli": "^2.10.10",
-    "styled-components": "^5.0.1",
-    "typed.js": "^2.0.9",
     "gatsby": "^2.19.7",
+    "gatsby-cli": "^2.10.10",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-manifest": "^2.2.39",
     "gatsby-plugin-offline": "^3.0.32",
@@ -40,6 +37,9 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
-    "sass": "^1.16.0"
+    "sass": "^1.16.0",
+    "styled-components": "^5.0.1",
+    "styled-components-breakpoint": "^3.0.0-preview.20",
+    "typed.js": "^2.0.9"
   }
 }
