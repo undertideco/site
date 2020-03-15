@@ -20,7 +20,7 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
-            siteURL
+            siteUrl
           }
         }
       }
@@ -34,8 +34,8 @@ function SEO({ description, lang, meta, title }) {
     '@type': 'Organization',
     name: 'Undertide Apps',
     description: metaDescription,
-    url: site.siteMetadata.siteURL,
-    logo: resolve(site.siteMetadata.siteURL, 'logo-meta.png'),
+    url: site.siteMetadata.siteUrl,
+    logo: resolve(site.siteMetadata.siteUrl, 'logo-meta.png'),
     sameAs: [
       'https://in.linkedin.com/company/undertide-apps',
       'https://twitter.com/undertideco',
@@ -72,11 +72,11 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: 'og:image',
-          content: resolve(site.siteMetadata.siteURL, 'logo-meta.png'),
+          content: resolve(site.siteMetadata.siteUrl, 'logo-meta.png'),
         },
         {
           name: 'og:url',
-          content: site.siteMetadata.siteURL,
+          content: site.siteMetadata.siteUrl,
         },
         {
           name: `twitter:card`,
@@ -84,7 +84,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: 'twitter:image',
-          content: resolve(site.siteMetadata.siteURL, 'logo-meta.png'),
+          content: resolve(site.siteMetadata.siteUrl, 'logo-meta.png'),
         },
         {
           name: `twitter:creator`,
@@ -92,7 +92,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: 'twitter:url',
-          content: site.siteMetadata.siteURL,
+          content: site.siteMetadata.siteUrl,
         },
         {
           name: `twitter:title`,

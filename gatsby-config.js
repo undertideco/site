@@ -3,7 +3,7 @@ module.exports = {
     title: 'Undertide Apps',
     description: 'Undertide Apps is a software consultancy based in Singapore.',
     author: `@undertideco`,
-    siteURL: 'https://undertide.co',
+    siteUrl: 'https://undertide.co',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
