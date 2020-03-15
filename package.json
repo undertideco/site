@@ -7,13 +7,13 @@
   "license": "MIT",
   "devDependencies": {
     "eslint": "^5.16.0 || ^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.0 || ^1.7.0",
-    "parcel-bundler": "^1.11.0",
-    "prettier": "1.19.1",
-    "sass": "^1.16.0",
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-manifest": "^2.2.39",
@@ -22,10 +22,13 @@
     "gatsby-plugin-sharp": "^2.4.3",
     "gatsby-source-filesystem": "^2.1.46",
     "gatsby-transformer-sharp": "^2.3.13",
+    "parcel-bundler": "^1.11.0",
+    "prettier": "^1.19.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "sass": "^1.16.0"
   },
   "scripts": {
     "build": "gatsby build",
@@ -35,6 +38,7 @@
   },
   "dependencies": {
     "gatsby-cli": "^2.10.10",
+    "styled-components": "^5.0.1",
     "typed.js": "^2.0.9"
   }
 }
