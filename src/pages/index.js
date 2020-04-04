@@ -24,6 +24,9 @@ import StyledLink from '../components/styled-link';
 
 const Hero = styled.div`
   padding: 32px 3rem 32px 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
 
   ${breakpoint('desktop')`
       padding: .5rem 3rem .5rem 3rem;
