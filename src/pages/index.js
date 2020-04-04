@@ -23,12 +23,12 @@ import mobile from '../images/mobile.svg';
 import StyledLink from '../components/styled-link';
 
 const Hero = styled.div`
-  padding: 32px 3rem 32px 3rem;
+  padding: 32px 21px 32px 21px;
   display: flex;
   flex-direction: column;
   align-items: start;
 
-  ${breakpoint('desktop')`
+  ${breakpoint('tablet')`
       padding: .5rem 3rem .5rem 3rem;
   `}
 `;
@@ -48,16 +48,21 @@ const SeeOurWorkButton = styled(Button)`
 const SkillsContainer = styled.div`
   background-color: white;
   box-shadow: 8px 4px 4px 0 rgba(0, 0, 0, 0.1);
-  margin: 64px 0;
-  padding: 3rem;
+  margin: 32px 0px;
+  padding: 32px 21px 32px 21px;
+
+  ${breakpoint('tablet')`
+    margin: 64px 0;
+    padding: 3rem;
+  `}
 `;
 
 const SkillsTagline = styled.span`
-  font-size: 52px;
+  font-size: 40px;
   font-weight: 700;
   color: #1f3040;
 
-  ${breakpoint('desktop')`
+  ${breakpoint('tablet')`
 font-size: 52px;
         max-width: 639px;
   `}

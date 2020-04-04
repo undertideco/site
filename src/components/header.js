@@ -12,6 +12,7 @@ const Wrapper = styled.header`
   margin: 32px 21px 0px 21px;
 
   ${breakpoint('desktop')`
+  margin: 32px 3rem 0px 3rem;
     //margin: 41px 39px 0px 39px;
   `}
 
