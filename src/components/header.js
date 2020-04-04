@@ -47,7 +47,7 @@ const WorkTogetherButton = styled(Button)`
 
   display: none;
 
-  ${breakpoint('desktop')`
+  ${breakpoint('tablet')`
     display: inline-block;
   `}
 `;
@@ -55,7 +55,10 @@ const WorkTogetherButton = styled(Button)`
 const HireUsText = styled.span`
   text-decoration-color: #f59369;
   color: #f59369;
-  ${breakpoint('desktop')`
+  font-size: 18px;
+  text-decoration: underline;
+
+  ${breakpoint('tablet')`
     display: none;
   `}
 `;
