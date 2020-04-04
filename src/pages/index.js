@@ -66,9 +66,9 @@ const IndexPage = () => (
     <Hero>
       <StyledLargeTitle>
         Make your ideas&nbsp;
-        <LineBreak desktop />
+        <LineBreak desktop tablet />
         a&nbsp;
-        <LineBreak mobile tablet />
+        <LineBreak mobile />
         <ReactTyped
           strings={['reality.', 'success.', 'delight.']}
           typeSpeed={40}
