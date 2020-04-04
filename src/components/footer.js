@@ -14,7 +14,7 @@ const Wrapper = styled.footer`
   color: white;
   padding: 46px 16px;
 
-  ${breakpoint('desktop')`
+  ${breakpoint('tablet')`
     justify-items: center;
   `}
 `;
@@ -29,9 +29,9 @@ const Tagline = styled.span`
   font-size: 22px;
   color: #f2fcfb;
 
-  ${breakpoint('desktop')`
-      font-size: 28px;
-    `}
+  ${breakpoint('tablet')`
+    font-size: 28px;
+  `}
 
   a {
     color: #f2fcfb;
@@ -60,9 +60,8 @@ function Footer() {
       {!isProjectsPage && (
         <Tagline>
           Let us hear more about&nbsp;
-          <Underline>you</Underline>
-!
-</Tagline>
+          <Underline>you</Underline>!
+        </Tagline>
       )}
       <StyledAnchor href="mailto:hello@undertide.co">
         <Button>Build something together</Button>
