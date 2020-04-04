@@ -46,7 +46,7 @@ const SkillsContainer = styled.div`
   background-color: white;
   box-shadow: 8px 4px 4px 0 rgba(0, 0, 0, 0.1);
   margin: 64px 0;
-  padding: 32px 3rem 32px 3rem;
+  padding: 3rem;
 `;
 
 const SkillsTagline = styled.span`

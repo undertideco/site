@@ -9,6 +9,15 @@ const SkillGrid = styled.div`
     'games';
   grid-row-gap: 14px;
 
+  ${breakpoint('tablet')`
+    grid-template-areas:
+      'webdev games'
+      'mobile mobile';
+
+      grid-row-gap: 32px;
+
+  `};
+
   ${breakpoint('desktop')`
 grid-template-areas:
           "webdev games"
