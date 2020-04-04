@@ -10,8 +10,7 @@ import BodyText from '../components/body-text';
 import Project from '../components/project';
 
 const Wrapper = styled.div`
-  padding: 0;
-  padding: 0.5rem 1.5rem;
+  padding: 32px 21px;
 
   ${breakpoint('tablet')`
       padding: .5rem 3rem;
@@ -19,8 +18,6 @@ const Wrapper = styled.div`
 `;
 
 const ProjectGrid = styled.div`
-  margin: 26px 0px 64px 0px;
-
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;

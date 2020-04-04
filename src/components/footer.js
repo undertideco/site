@@ -12,7 +12,7 @@ const Wrapper = styled.footer`
 
   background-color: #0c2741;
   color: white;
-  padding: 46px 16px;
+  padding: 46px 21px;
 
   ${breakpoint('tablet')`
     justify-items: center;
