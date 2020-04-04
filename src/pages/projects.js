@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   padding: 0;
   padding: 0.5rem 1.5rem;
 
-  ${breakpoint('desktop')`
+  ${breakpoint('tablet')`
       padding: .5rem 3rem;
   `}
 `;
