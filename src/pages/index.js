@@ -23,7 +23,7 @@ import mobile from '../images/mobile.svg';
 import StyledLink from '../components/styled-link';
 
 const Hero = styled.div`
-  padding: 0;
+  padding: 32px 3rem 32px 3rem;
 
   ${breakpoint('desktop')`
       padding: .5rem 3rem .5rem 3rem;
@@ -50,7 +50,7 @@ const SkillsContainer = styled.div`
 `;
 
 const SkillsTagline = styled.span`
-  font-size: 40px;
+  font-size: 52px;
   font-weight: 700;
   color: #1f3040;
 
