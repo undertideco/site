@@ -11,6 +11,7 @@ import SEO from '../components/seo';
 import BodyText from '../components/body-text';
 import StyledAnchor from '../components/styled-anchor';
 import BlogPostPropType from '../prop-types/BlogPost';
+import HighlightWrapper from '../components/HighlightWrapper';
 
 const Wrapper = styled.div`
   padding: 32px 21px;
@@ -36,6 +37,7 @@ const Image = styled(GatsbyImage)`
 const components = {
   p: BodyText,
   a: StyledAnchor,
+  pre: HighlightWrapper,
 };
 
 function BlogTemplate(props) {
