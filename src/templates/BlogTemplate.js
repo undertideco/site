@@ -52,7 +52,9 @@ function BlogTemplate(props) {
         {image && <Image fluid={image?.childImageSharp?.fluid} />}
         <Title>{title}</Title>
         <Metadata>
-          Posted on X by&nbsp;
+          Posted on&nbsp;
+          {new Date(date).toLocaleDateString()}
+          &nbsp;by&nbsp;
           <Author>{author}</Author>
         </Metadata>
         <MDXProvider components={components}>
