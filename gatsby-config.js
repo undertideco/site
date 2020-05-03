@@ -13,6 +13,15 @@ module.exports = {
         defaultLayouts: {
           blogPosts: require.resolve('./src/templates/BlogTemplate.js'),
         },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1035,
+              sizeByPixelDensity: true,
+            },
+          },
+        ],
       },
     },
     {
@@ -36,6 +45,14 @@ module.exports = {
         path: `${__dirname}/content/blog`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blogAssets`,
+        path: `${__dirname}/content/assets`,
+      },
+    },
+    'gatsby-remark-images',
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     'gatsby-plugin-styled-components',

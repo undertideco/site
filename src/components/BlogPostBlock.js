@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
+import GatsbyImage from 'gatsby-image';
 
 const Wrapper = styled(Link)`
   display: flex;
@@ -17,12 +18,18 @@ const Description = styled.span``;
 function BlogPostBlock(props) {
   const {
     node: {
-      frontmatter: { title, description },
+      frontmatter: { title, description, image },
       fields: { slug },
     },
   } = props;
+
+  const {
+    childImageSharp: { fluid },
+  } = image;
+
   return (
     <Wrapper to={slug}>
+      {image && <GatsbyImage fluid={fluid} />}
       <Title>{title}</Title>
       <Description>{description}</Description>
     </Wrapper>

@@ -27,6 +27,13 @@ function Blog() {
               date
               description
               author
+              image {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid_withWebp
+                  }
+                }
+              }
             }
             fields {
               slug
@@ -43,7 +50,7 @@ function Blog() {
       <Wrapper>
         <LargeTitle>Blog</LargeTitle>
         {allMdx.edges.map(({ node }) => (
-          <BlogPostBlock node={node} />
+          <BlogPostBlock key={node.id} node={node} />
         ))}
       </Wrapper>
     </Layout>
