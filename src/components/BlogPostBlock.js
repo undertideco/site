@@ -23,13 +23,9 @@ function BlogPostBlock(props) {
     },
   } = props;
 
-  const {
-    childImageSharp: { fluid },
-  } = image;
-
   return (
     <Wrapper to={slug}>
-      {image && <GatsbyImage fluid={fluid} />}
+      {image && <GatsbyImage fluid={image?.childImageSharp?.fluid} />}
       <Title>{title}</Title>
       <Description>{description}</Description>
     </Wrapper>

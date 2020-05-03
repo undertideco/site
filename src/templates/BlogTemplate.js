@@ -44,15 +44,11 @@ function BlogTemplate(props) {
 
   const { title, author, date, image } = mdx.frontmatter;
 
-  const {
-    childImageSharp: { fluid },
-  } = image;
-
   return (
     <Layout>
       <SEO title={title} />
       <Wrapper>
-        {image && <Image fluid={fluid} />}
+        {image && <Image fluid={image?.childImageSharp?.fluid} />}
         <Title>{title}</Title>
         <Metadata>
           Posted on X by&nbsp;
