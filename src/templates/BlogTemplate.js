@@ -10,6 +10,7 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import BodyText from '../components/body-text';
 import StyledAnchor from '../components/styled-anchor';
+import BlogPostPropType from '../prop-types/BlogPost';
 
 const Wrapper = styled.div`
   padding: 32px 21px;
@@ -64,18 +65,7 @@ function BlogTemplate(props) {
 
 BlogTemplate.propTypes = {
   data: PropTypes.shape({
-    mdx: PropTypes.shape({
-      id: PropTypes.string,
-      body: PropTypes.func,
-      frontmatter: PropTypes.shape({
-        title: PropTypes.string,
-        date: PropTypes.string,
-        author: PropTypes.string,
-        image: PropTypes.shape({
-          fluid: PropTypes.shape(),
-        }),
-      }),
-    }),
+    mdx: BlogPostPropType,
   }).isRequired,
 };
 

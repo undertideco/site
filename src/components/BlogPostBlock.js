@@ -1,8 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
 import GatsbyImage from 'gatsby-image';
+import BlogPostPropType from '../prop-types/BlogPost';
 
 const Wrapper = styled(Link)`
   display: flex;
@@ -33,17 +33,7 @@ function BlogPostBlock(props) {
 }
 
 BlogPostBlock.propTypes = {
-  node: PropTypes.shape({
-    frontmatter: PropTypes.shape({
-      date: PropTypes.string,
-      description: PropTypes.string,
-      author: PropTypes.string,
-      title: PropTypes.string,
-    }),
-    fields: PropTypes.shape({
-      slug: PropTypes.string,
-    }),
-  }).isRequired,
+  node: BlogPostPropType.isRequired,
 };
 
 export default BlogPostBlock;
