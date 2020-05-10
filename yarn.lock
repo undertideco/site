@@ -7105,7 +7105,7 @@ gatsby-plugin-manifest@^2.2.39:
     semver "^5.7.1"
     sharp "^0.25.1"
 
-gatsby-plugin-mdx@^1.0.32, gatsby-plugin-mdx@^1.2.4:
+gatsby-plugin-mdx@^1.0.32:
   version "1.2.6"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-1.2.6.tgz#f97d2131287ca1272ac8aa4eded81c884ebfb439"
   integrity sha512-eXekmfycok8ljzTs3t2/WHtGlo7218ZhlxVjV4tRoQ/tTKSa/gnhqUIjCkiU6GiU7SpQWrX/z3aTAeTRseLoFw==
@@ -13151,7 +13151,7 @@ prism-react-renderer@^0.1.7:
   resolved "https://registry.yarnpkg.com/prism-react-renderer/-/prism-react-renderer-0.1.7.tgz#dc273d0cb6e4a498ba0775094e9a8b01a3ad2eaa"
   integrity sha512-EhnM0sYfLK103ASK0ViSv0rta//ZGB0dBA9TiFyOvA+zOj5peLmGEG01sLEDwl9sMe+gSqncInafBe1VFTCMvA==
 
-prism-react-renderer@^1.0.1, prism-react-renderer@^1.1.0:
+prism-react-renderer@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/prism-react-renderer/-/prism-react-renderer-1.1.0.tgz#6fe1b33f1de1b23afbdb07663d135f9026eef4ad"
   integrity sha512-WZAw+mBoxk1qZDD1h1WOg0BVHgyk9zqbuIBFNgP+Z71i515jGL0WZIN1FIF8EgOyh06x8Rr7HAUXxsRsoUZKyg==
