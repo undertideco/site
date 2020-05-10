@@ -6,8 +6,9 @@ module.exports = {
     author: `@undertideco`,
     siteUrl: 'https://undertide.co',
     hero: {
-      heading: 'Undertide Apps is a software consultancy based in Singapore.',
-      maxWidth: 652,
+      heading:
+        'Written by a collective of crafts-people with extensive software engineering experience.',
+      maxWidth: 700,
     },
     social: [
       {
@@ -28,6 +29,7 @@ module.exports = {
         contentPosts: 'content/posts',
         contentAuthors: 'content/authors',
         basePath: '/blog',
+        rootPath: '/',
       },
     },
     `gatsby-plugin-react-helmet`,
