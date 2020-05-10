@@ -56,8 +56,27 @@ function MeetTheTeamPage() {
   `);
 
   const membersSorted = useMemo(
-    // NOTE (hello@duncanleo.me): Unorthodox sorting method but it does place founders at the bottom
-    () => [...authors.edges].sort(edge => edge.node.founder),
+    () =>
+      [...authors.edges].sort((a, b) => {
+        const nameA = a.node.name.toUpperCase();
+        const nameB = b.node.name.toUpperCase();
+
+        if (b.node.founder) {
+          return 1;
+        }
+        if (a.node.founder && !b.node.founder) {
+          return 1;
+        }
+
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
+
+        return 0;
+      }),
     [authors]
   );
 
