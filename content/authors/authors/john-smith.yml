@@ -1,0 +1,10 @@
+name: John Smith
+bio: Hello
+avatar: ../../../src/images/gatsby-astronaut.png
+social:
+  - url: https://unsplash.com
+  - url: https://stackoverflow.com
+  - url: https://github.com
+  - url: https://github.com
+  - url: https://github.com
+featured: true

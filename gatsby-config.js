@@ -1,29 +1,36 @@
 module.exports = {
   siteMetadata: {
+    name: 'Undertide Apps',
     title: 'Undertide Apps',
     description: 'Undertide Apps is a software consultancy based in Singapore.',
     author: `@undertideco`,
     siteUrl: 'https://undertide.co',
+    hero: {
+      heading: 'Undertide Apps is a software consultancy based in Singapore.',
+      maxWidth: 652,
+    },
+    social: [
+      {
+        name: `twitter`,
+        url: `https://twitter.com/undertideco`,
+      },
+      {
+        name: `github`,
+        url: `https://github.com/undertideco`,
+      },
+    ],
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     {
-      resolve: 'gatsby-plugin-mdx',
+      resolve: '@narative/gatsby-theme-novela',
       options: {
-        defaultLayouts: {
-          blogPosts: require.resolve('./src/templates/BlogTemplate.js'),
-        },
-        gatsbyRemarkPlugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 1035,
-              sizeByPixelDensity: true,
-            },
-          },
-        ],
+        authorsPage: true,
+        contentPosts: 'content/posts',
+        contentAuthors: 'content/authors',
+        basePath: '/blog',
       },
     },
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -38,23 +45,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `blogPosts`,
-        path: `${__dirname}/content/blog`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `blogAssets`,
-        path: `${__dirname}/content/assets`,
-      },
-    },
-    'gatsby-remark-images',
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     'gatsby-plugin-styled-components',
     {
       resolve: `gatsby-plugin-manifest`,
