@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import { useStaticQuery, graphql } from 'gatsby';
@@ -48,11 +48,18 @@ function MeetTheTeamPage() {
                 }
               }
             }
+            founder
           }
         }
       }
     }
   `);
+
+  const membersSorted = useMemo(
+    // NOTE (hello@duncanleo.me): Unorthodox sorting method but it does place founders at the bottom
+    () => [...authors.edges].sort(edge => edge.node.founder),
+    [authors]
+  );
 
   return (
     <Layout>
@@ -71,7 +78,7 @@ function MeetTheTeamPage() {
           finest example of the whole being greater than the sum of its parts.
         </BodyText>
         <TeamMembersContainer>
-          {authors.edges.map(edge => (
+          {membersSorted.map(edge => (
             <TeamMember member={edge.node} />
           ))}
         </TeamMembersContainer>
