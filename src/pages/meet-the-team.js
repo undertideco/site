@@ -2,6 +2,7 @@ import React, { useMemo } from 'react';
 import styled from 'styled-components';
 import breakpoint from 'styled-components-breakpoint';
 import { useStaticQuery, graphql } from 'gatsby';
+import orderBy from 'lodash/orderBy';
 import Layout from '../components/layout';
 import LargeTitle from '../components/large-title';
 import BodyText from '../components/body-text';
@@ -57,26 +58,7 @@ function MeetTheTeamPage() {
 
   const membersSorted = useMemo(
     () =>
-      [...authors.edges].sort((a, b) => {
-        const nameA = a.node.name.toUpperCase();
-        const nameB = b.node.name.toUpperCase();
-
-        if (b.node.founder) {
-          return 1;
-        }
-        if (a.node.founder && !b.node.founder) {
-          return 1;
-        }
-
-        if (nameA < nameB) {
-          return -1;
-        }
-        if (nameA > nameB) {
-          return 1;
-        }
-
-        return 0;
-      }),
+      orderBy(authors.edges, ['node.founder', 'node.name'], ['desc', 'asc']),
     [authors]
   );
 
