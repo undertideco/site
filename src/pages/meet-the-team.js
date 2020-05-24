@@ -19,18 +19,23 @@ const Wrapper = styled.div`
 
 const TeamMembersContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 1fr;
   row-gap: 32px;
   padding: 32px 0;
 
   ${breakpoint('tablet')`
-    grid-template-columns: 1fr 1fr;
-  padding: 48px 0;
-  row-gap: 48px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 42px 0;
+    row-gap: 42px;
+    width: 85%
   `}
 
+  ${breakpoint('desktop')`
+    width: 50%
+  `}
+
+  width: 100%;
   margin: 0 auto;
-  max-width: 800px;
 `;
 
 function MeetTheTeamPage() {
@@ -58,7 +63,7 @@ function MeetTheTeamPage() {
 
   const membersSorted = useMemo(
     () =>
-      orderBy(authors.edges, ['node.founder', 'node.name'], ['desc', 'asc']),
+      orderBy(authors.edges, ['node.founder', 'node.name'], ['asc', 'desc']),
     [authors]
   );
 

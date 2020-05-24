@@ -4,31 +4,28 @@ import PropTypes from 'prop-types';
 import GatsbyImage from 'gatsby-image';
 
 const Wrapper = styled.div`
-  display: grid;
-  grid-template-areas:
-    'avatar name'
-    'avatar bio';
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto 1fr;
-  column-gap: 16px;
-  row-gap: 16px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
 `;
 
 const Avatar = styled(GatsbyImage)`
-  grid-area: avatar;
   width: 150px;
   height: 150px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
 `;
 const Name = styled.h3`
   margin: 0;
-  grid-area: name;
   font-size: 1.2em;
   font-weight: 600;
   color: #0c2741;
+  margin-bottom: 0.5rem;
 `;
 const Bio = styled.span`
-  grid-area: bio;
   color: #5f6b7a;
+  line-height: 1.3;
 `;
 
 function TeamMember(props) {
