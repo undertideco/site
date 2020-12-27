@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import styled from 'styled-components';
-import breakpoint from 'styled-components-breakpoint';
+import { breakpoint } from 'styled-components-breakpoint';
 import ReactTyped from 'react-typed';
 import Layout from '../components/layout';
 import SEO from '../components/seo';

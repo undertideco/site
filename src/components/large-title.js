@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import breakpoint from 'styled-components-breakpoint';
+import { breakpoint } from 'styled-components-breakpoint';
 
 const LargeTitle = styled.h1`
   font-size: 60px;
