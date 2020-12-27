@@ -9,33 +9,35 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { resolve } from 'url';
-import { useStaticQuery, graphql } from 'gatsby';
+import config from '../config';
 
 function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
-            siteUrl
-          }
-        }
-      }
-    `
-  );
+  // const { site } = useStaticQuery(
+  //   graphql`
+  //     query {
+  //       site {
+  //         siteMetadata {
+  //           title
+  //           description
+  //           author
+  //           siteUrl
+  //         }
+  //       }
+  //     }
+  //   `
+  // );
+  //
+  const { siteMetadata } = config;
 
-  const metaDescription = description || site.siteMetadata.description;
+  const metaDescription = description || siteMetadata.description;
 
   const jsonLDSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Undertide Apps',
     description: metaDescription,
-    url: site.siteMetadata.siteUrl,
-    logo: resolve(site.siteMetadata.siteUrl, 'logo-meta.png'),
+    url: siteMetadata.siteUrl,
+    logo: resolve(siteMetadata.siteUrl, 'logo-meta.png'),
     sameAs: [
       'https://in.linkedin.com/company/undertide-apps',
       'https://twitter.com/undertideco',
@@ -52,7 +54,7 @@ function SEO({ description, lang, meta, title }) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | ${siteMetadata.title}`}
       meta={[
         {
           name: `description`,
@@ -60,7 +62,7 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           property: `og:title`,
-          content: `Make your ideas a reality. | ${site.siteMetadata.title}`,
+          content: `Make your ideas a reality. | ${siteMetadata.title}`,
         },
         {
           property: `og:description`,
@@ -72,11 +74,11 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: 'og:image',
-          content: resolve(site.siteMetadata.siteUrl, 'logo-meta.png'),
+          content: resolve(siteMetadata.siteUrl, 'logo-meta.png'),
         },
         {
           name: 'og:url',
-          content: site.siteMetadata.siteUrl,
+          content: siteMetadata.siteUrl,
         },
         {
           name: `twitter:card`,
@@ -84,19 +86,19 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: 'twitter:image',
-          content: resolve(site.siteMetadata.siteUrl, 'logo-meta.png'),
+          content: resolve(siteMetadata.siteUrl, 'logo-meta.png'),
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: siteMetadata.author,
         },
         {
           name: 'twitter:url',
-          content: site.siteMetadata.siteUrl,
+          content: siteMetadata.siteUrl,
         },
         {
           name: `twitter:title`,
-          content: `Make your ideas a reality. | ${site.siteMetadata.title}`,
+          content: `Make your ideas a reality. | ${siteMetadata.title}`,
         },
         {
           name: `twitter:description`,

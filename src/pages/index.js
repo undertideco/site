@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import Link from 'next/link';
 
 import styled from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
@@ -17,9 +17,9 @@ import Skill, {
   Tech,
   SkillTitle,
 } from '../components/skill';
-import webdev from '../images/webdev.svg';
-import games from '../images/games.svg';
-import mobile from '../images/mobile.svg';
+import { ReactComponent as webdev } from '../images/webdev.svg';
+import { ReactComponent as games } from '../images/games.svg';
+import { ReactComponent as mobile } from '../images/mobile.svg';
 import StyledLink from '../components/styled-link';
 
 const Hero = styled.div`
@@ -96,7 +96,7 @@ const IndexPage = () => (
         users off their feet. Since then, individuals and companies have
         approached us to do the same for their customers.
       </BodyText>
-      <StyledLink to="/projects">
+      <StyledLink href="/projects">
         <SeeOurWorkButton>See our work</SeeOurWorkButton>
       </StyledLink>
     </Hero>

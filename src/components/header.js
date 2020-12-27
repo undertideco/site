@@ -1,9 +1,9 @@
-import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
-import logo from '../images/logo.png';
 import { breakpoint } from 'styled-components-breakpoint';
+import Link from 'next/link';
+import Image from 'next/image';
 import Button from './button';
 import StyledAnchor from './styled-anchor';
 import StyledLink from './styled-link';
@@ -18,10 +18,6 @@ const Wrapper = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-`;
-
-const Logo = styled.img`
-  width: 50px;
 `;
 
 const Menu = styled.div`
@@ -65,12 +61,18 @@ const HireUsText = styled.span`
 
 const Header = () => (
   <Wrapper>
-    <StyledLink to="/">
-      <Logo src={logo} alt="Logo of Undertide" />
+    <StyledLink href="/">
+      <Image
+        src="/logo.png"
+        width={50}
+        height={50}
+        alt="Logo of Undertide"
+        objectFit="contain"
+      />
     </StyledLink>
     <Menu>
-      <MenuLink to="/">Home</MenuLink>
-      <MenuLink to="/projects">Work</MenuLink>
+      <MenuLink href="/">Home</MenuLink>
+      <MenuLink href="/projects">Work</MenuLink>
       <StyledAnchor href="mailto:hello@undertide.co">
         <HireUsText>Hire Us</HireUsText>
         <WorkTogetherButton>Let&apos;s Work Together</WorkTogetherButton>
