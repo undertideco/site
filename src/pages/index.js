@@ -17,9 +17,9 @@ import Skill, {
   Tech,
   SkillTitle,
 } from '../components/skill';
-import { ReactComponent as webdev } from '../images/webdev.svg';
-import { ReactComponent as games } from '../images/games.svg';
-import { ReactComponent as mobile } from '../images/mobile.svg';
+import webdev from '../images/webdev.svg';
+import games from '../images/games.svg';
+import mobile from '../images/mobile.svg';
 import StyledLink from '../components/styled-link';
 
 const Hero = styled.div`
