@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
 import { find } from 'lodash';
-import Image from 'next/image';
 
 const Wrapper = styled.div`
   display: flex;
@@ -20,6 +19,12 @@ const Wrapper = styled.div`
   ${breakpoint('desktop')`
     flex-basis: calc(33% - .5rem - .5rem);
   `}
+`;
+
+const ProjectImage = styled.img`
+  width: 375px;
+  height: 300px;
+  object-fit: cover;
 `;
 
 const ProjectTitleContainer = styled.a`
@@ -44,7 +49,7 @@ function Project(props) {
 
   return (
     <Wrapper>
-      <Image
+      <ProjectImage
         src={`/images/projects/${bannerFileName}`}
         width={375}
         height={300}

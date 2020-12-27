@@ -3,7 +3,6 @@ import React from 'react';
 import styled from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
 import Link from 'next/link';
-import Image from 'next/image';
 import Button from './button';
 import StyledAnchor from './styled-anchor';
 import StyledLink from './styled-link';
@@ -18,6 +17,12 @@ const Wrapper = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+`;
+
+const Logo = styled.img`
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
 `;
 
 const Menu = styled.div`
@@ -62,13 +67,7 @@ const HireUsText = styled.span`
 const Header = () => (
   <Wrapper>
     <StyledLink href="/">
-      <Image
-        src="/logo.png"
-        width={50}
-        height={50}
-        alt="Logo of Undertide"
-        objectFit="contain"
-      />
+      <Logo src="/logo.png" alt="Logo of Undertide" />
     </StyledLink>
     <Menu>
       <MenuLink href="/">Home</MenuLink>
