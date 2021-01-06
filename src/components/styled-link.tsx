@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import React from 'react';
 import styled from 'styled-components';
 
 // Underlying anchor
@@ -6,7 +7,12 @@ const StyledAnchor = styled.a`
   text-decoration: none;
 `;
 
-function StyledLink(props) {
+interface Props {
+  href: string;
+  className?: string;
+}
+
+const StyledLink: React.FC<Props> = function(props) {
   const { href, children, className } = props;
 
   return (
@@ -14,6 +20,6 @@ function StyledLink(props) {
       <StyledAnchor className={className}>{children}</StyledAnchor>
     </Link>
   );
-}
+};
 
 export default StyledLink;
