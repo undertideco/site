@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
-import Link from 'next/link';
 import Button from './button';
 import StyledAnchor from './styled-anchor';
 import StyledLink from './styled-link';
@@ -32,7 +31,7 @@ const Menu = styled.div`
   align-items: center;
 `;
 
-const MenuLink = styled(Link)`
+const MenuLink = styled(StyledLink)`
   font-size: 18px;
   color: #5f6b7a;
   text-align: left;
