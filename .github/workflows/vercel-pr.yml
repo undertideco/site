@@ -1,8 +1,7 @@
-name: Deploy to Production
+name: Deploy Preview
 on:
-  push:
-    branches:
-      - master
+  pull_request:
+    branches: [master]
 
 jobs:
   deploy:
@@ -14,8 +13,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          github-comment: false
-          vercel-args: '--prod'
+          github-comment: true
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
       - name: preview-url
