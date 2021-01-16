@@ -90,3 +90,5 @@ typings/
 
 # gatsby files
 dist/
+
+.vercel
