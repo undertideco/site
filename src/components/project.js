@@ -1,9 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import breakpoint from 'styled-components-breakpoint';
-import { useStaticQuery, graphql } from 'gatsby';
-import GatsbyImage from 'gatsby-image';
+import { breakpoint } from 'styled-components-breakpoint';
 import { find } from 'lodash';
 
 const Wrapper = styled.div`
@@ -23,10 +21,14 @@ const Wrapper = styled.div`
   `}
 `;
 
-const ProjectBanner = styled(GatsbyImage)`
+const ProjectImage = styled.img`
+  width: 375px;
+  height: 300px;
   object-fit: cover;
-  width: 100%;
-  margin-bottom: 8px;
+`;
+
+const ProjectTitleContainer = styled.a`
+  margin-top: 8px;
 `;
 
 const ProjectTitle = styled.span`
@@ -44,33 +46,18 @@ const ProjectDetail = styled.span`
 
 function Project(props) {
   const { title, url, owner, tech, bannerFileName } = props;
-  const { allFile } = useStaticQuery(
-    graphql`
-      {
-        allFile(filter: { sourceInstanceName: { eq: "projectImages" } }) {
-          nodes {
-            name
-            childImageSharp {
-              fluid(quality: 90) {
-                ...GatsbyImageSharpFluid_withWebp
-              }
-            }
-          }
-        }
-      }
-    `
-  );
-
-  const file = find(allFile.nodes, node => node.name === bannerFileName);
-
-  const { fluid } = file ? file.childImageSharp : { fluid: null };
 
   return (
     <Wrapper>
-      {fluid && <ProjectBanner fluid={fluid} />}
-      <a href={url}>
+      <ProjectImage
+        src={`/images/projects/${bannerFileName}`}
+        width={375}
+        height={300}
+        objectFit="cover"
+      />
+      <ProjectTitleContainer href={url}>
         <ProjectTitle>{title}</ProjectTitle>
-      </a>
+      </ProjectTitleContainer>
       <ProjectDetail>{owner}</ProjectDetail>
       <ProjectDetail>{tech}</ProjectDetail>
     </Wrapper>

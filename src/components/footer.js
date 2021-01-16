@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import breakpoint from 'styled-components-breakpoint';
-import { useLocation } from '@reach/router';
+import { breakpoint } from 'styled-components-breakpoint';
+import { useRouter } from 'next/router';
 import Button from './button';
 import StyledAnchor from './styled-anchor';
 
@@ -47,8 +47,8 @@ const Underline = styled.span`
 `;
 
 function Footer() {
-  const location = useLocation();
-  const isProjectsPage = location.pathname === '/projects';
+  const router = useRouter();
+  const isProjectsPage = router.pathname === '/projects';
 
   return (
     <Wrapper>

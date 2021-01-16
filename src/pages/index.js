@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import Link from 'next/link';
 
 import styled from 'styled-components';
-import breakpoint from 'styled-components-breakpoint';
+import { breakpoint } from 'styled-components-breakpoint';
 import ReactTyped from 'react-typed';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
@@ -96,7 +96,7 @@ const IndexPage = () => (
         users off their feet. Since then, individuals and companies have
         approached us to do the same for their customers.
       </BodyText>
-      <StyledLink to="/projects">
+      <StyledLink href="/projects">
         <SeeOurWorkButton>See our work</SeeOurWorkButton>
       </StyledLink>
     </Hero>

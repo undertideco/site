@@ -1,6 +1,8 @@
 [build]
-  command = "gatsby build"
-  publish = "public"
+  command = "yarn build"
 
 [dev]
-  command = "gatsby develop"
+  command = "yarn dev"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import styled from 'styled-components';
-import breakpoint from 'styled-components-breakpoint';
+import { breakpoint } from 'styled-components-breakpoint';
 import Layout from '../components/layout';
 import SEO from '../components/seo';
 import LargeTitle from '../components/large-title';
@@ -37,74 +37,74 @@ const ProjectsPage = () => (
       </BodyText>
       <ProjectGrid>
         <Project
-          bannerFileName="bside-city"
+          bannerFileName="bside-city.jpg"
           title="B-side"
           url="https://b-side.city"
           owner="in the wild"
           tech="Wordpress"
         />
         <Project
-          bannerFileName="inwords"
+          bannerFileName="inwords.jpg"
           title="Inwords"
           url="https://inwords.ai"
           owner="Symbiose Technologies"
           tech="iOS"
         />
         <Project
-          bannerFileName="doppler"
+          bannerFileName="doppler.jpg"
           title="Doppler WiFi Transfer"
           url="https://brushedtype.co/doppler"
           owner="Brushed Type"
           tech="iOS"
         />
         <Project
-          bannerFileName="trill"
+          bannerFileName="trill.png"
           title="Trill Project - Find Your Supportive Community"
           url="https://trillproject.com"
           owner="Trill Project"
           tech="Android, Node"
         />
         <Project
-          bannerFileName="itw_mockup"
+          bannerFileName="itw_mockup.jpg"
           title="In The Wild Landing Site"
           url="https://www.weareinthewild.com"
           owner="in the wild"
           tech="Web Design, Webflow"
         />
         <Project
-          bannerFileName="our-shared-stories"
+          bannerFileName="our-shared-stories.png"
           title="Our Shared Stories"
           url="https://www.nlb.gov.sg/Portals/0/Reports/fy17/"
           owner="National Library Board (in partnership with In The Wild)"
           tech="Web Design, Webflow"
         />
         <Project
-          bannerFileName="harmany"
+          bannerFileName="harmany.png"
           title="Harmany - Music Sharing Made Easy"
           url="https://harmany.me"
           owner="Undertide Apps"
           tech="iOS, Go"
         />
         <Project
-          bannerFileName="nextbus-android"
+          bannerFileName="nextbus-android.png"
           title="NextBus Android"
           owner="SG NextBus"
           tech="Android, Design"
         />
         <Project
-          bannerFileName="nextbus-web"
+          bannerFileName="nextbus-web.png"
           title="NextBus Web"
           owner="SG NextBus"
           tech="Web Design, React"
         />
         <Project
-          bannerFileName="open-event-ios"
+          bannerFileName="open-event-ios.png"
           title="Open Event iOS"
           owner="FOSSAsia"
           tech="iOS, Design"
         />
         <Project
-          bannerFileName="nebulo"
+          bannerFileName="nebulo.png"
           title="Nebulo - Beautiful Smog Reports"
           url="https://nebulo.undertide.co"
           owner="Undertide Apps"

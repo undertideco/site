@@ -89,6 +89,4 @@ typings/
 .DS_Store
 
 # gatsby files
-.cache/
-public
 dist/
