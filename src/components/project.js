@@ -1,31 +1,18 @@
-import { find } from 'lodash';
 import Image from 'next/image';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
-import { breakpoint } from 'styled-components-breakpoint';
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
   margin-bottom: 24px;
-
-  flex-basis: 100%;
-
-  ${breakpoint('tablet')`
-    flex-basis: calc(50% - .5rem - .5rem);
-  `}
-
-  ${breakpoint('desktop')`
-    flex-basis: calc(33% - .5rem - .5rem);
-  `}
 `;
 
 const ProjectImageWrapper = styled.div`
   position: relative;
-  width: 375px;
-  height: 300px;
+  height: 28vh;
   overflow: hidden;
 `;
 
