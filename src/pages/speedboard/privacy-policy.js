@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
-import Layout from '../../components/layout';
-import SEO from '../../components/seo';
+
+import Layout from '../../components/Layout';
+import SEO from '../../components/SEO';
 
 const Wrapper = styled.div`
   padding: 32px 21px;

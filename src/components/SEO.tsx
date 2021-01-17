@@ -1,18 +1,17 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import Head from 'next/head';
-import PropTypes from 'prop-types';
 import React from 'react';
 import { resolve } from 'url';
 
 import config from '../config';
 
-function SEO({ description, lang, meta, title }) {
+interface Props {
+  lang?: string;
+  description?: string;
+  title: string;
+}
+
+const SEO: React.FC<Props> = function(props) {
+  const { description, title } = props;
   const { siteMetadata } = config;
 
   const metaDescription = description || siteMetadata.description;
@@ -66,19 +65,6 @@ function SEO({ description, lang, meta, title }) {
       <script type="application/ld+json">{JSON.stringify(jsonLDSchema)}</script>
     </Head>
   );
-}
-
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
-};
-
-SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
 };
 
 export default SEO;
