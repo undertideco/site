@@ -5,6 +5,11 @@ module.exports = {
       use: ['@svgr/webpack', 'url-loader'],
     });
 
+    config.module.rules.push({
+      test: /\.mdx?$/,
+      use: 'raw-loader',
+    });
+
     return config;
   },
   target: 'serverless',

@@ -80,6 +80,7 @@ const Header = () => (
     <Menu>
       <MenuLink href="/">Home</MenuLink>
       <MenuLink href="/projects">Work</MenuLink>
+      <MenuLink href="/meet-the-team">Meet the Team</MenuLink>
       <StyledAnchor href="mailto:hello@undertide.co">
         <HireUsText>Hire Us</HireUsText>
         <WorkTogetherButton>Let&apos;s Work Together</WorkTogetherButton>
