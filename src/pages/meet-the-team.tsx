@@ -1,5 +1,5 @@
 import fs from 'fs';
-import * as matter from 'gray-matter';
+import matter from 'gray-matter';
 import orderBy from 'lodash/orderBy';
 import { GetStaticProps } from 'next';
 import path from 'path';
