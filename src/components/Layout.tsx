@@ -10,7 +10,7 @@ const Layout: React.FC = function(props) {
 
   return (
     <>
-      <Header siteTitle={config.siteMetadata.siteTitle} />
+      <Header siteTitle={config.siteMetadata.title} />
       <>
         <main>{children}</main>
         <Footer />
