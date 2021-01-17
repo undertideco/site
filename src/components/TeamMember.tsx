@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
+import { breakpoint } from 'styled-components-breakpoint';
 
 const Wrapper = styled.div`
   display: flex;
@@ -11,8 +12,13 @@ const Wrapper = styled.div`
 
 const AvatarWrapper = styled.div`
   position: relative;
+  width: 100px;
+  height: 100px;
+
+  ${breakpoint('desktop')`
   width: 150px;
   height: 150px;
+  `}
   border-radius: 10px;
   margin-bottom: 1rem;
 `;
