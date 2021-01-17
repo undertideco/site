@@ -1,26 +1,26 @@
-import React from 'react';
 import Link from 'next/link';
-
+import React from 'react';
+import ReactTyped from 'react-typed';
 import styled from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
-import ReactTyped from 'react-typed';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import LargeTitle from '../components/large-title';
+
 import BodyText from '../components/body-text';
-import LineBreak from '../components/line-break';
 import Button from '../components/button';
-import SkillGrid from '../components/skill-grid';
+import LargeTitle from '../components/large-title';
+import Layout from '../components/Layout';
+import LineBreak from '../components/line-break';
+import SEO from '../components/seo';
 import Skill, {
   SkillIcon,
   SkillList,
-  Tech,
   SkillTitle,
+  Tech,
 } from '../components/skill';
-import webdev from '../images/webdev.svg';
+import SkillGrid from '../components/skill-grid';
+import StyledLink from '../components/styled-link';
 import games from '../images/games.svg';
 import mobile from '../images/mobile.svg';
-import StyledLink from '../components/styled-link';
+import webdev from '../images/webdev.svg';
 
 const Hero = styled.div`
   padding: 32px 21px 32px 21px;
