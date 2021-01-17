@@ -9,7 +9,7 @@ import Button from '../components/button';
 import LargeTitle from '../components/large-title';
 import Layout from '../components/Layout';
 import LineBreak from '../components/line-break';
-import SEO from '../components/seo';
+import SEO from '../components/SEO';
 import Skill, {
   SkillIcon,
   SkillList,

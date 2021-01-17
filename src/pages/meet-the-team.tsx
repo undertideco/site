@@ -10,7 +10,7 @@ import { breakpoint } from 'styled-components-breakpoint';
 import BodyText from '../components/body-text';
 import LargeTitle from '../components/large-title';
 import Layout from '../components/Layout';
-import SEO from '../components/seo';
+import SEO from '../components/SEO';
 import TeamMember from '../components/TeamMember';
 
 const Wrapper = styled.div`
