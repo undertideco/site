@@ -5,10 +5,11 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
 import Head from 'next/head';
+import PropTypes from 'prop-types';
+import React from 'react';
 import { resolve } from 'url';
+
 import config from '../config';
 
 function SEO({ description, lang, meta, title }) {
@@ -36,8 +37,7 @@ function SEO({ description, lang, meta, title }) {
   return (
     <Head>
       <title>
-        {title} |
-{siteMetadata.title}
+        {title} | {siteMetadata.title}
       </title>
       <meta name="description" content={metaDescription} />
       <meta
