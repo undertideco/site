@@ -18,13 +18,14 @@ const Wrapper = styled.div`
 
 const ProjectGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   column-gap: 24px;
   row-gap: 24px;
 
   ${breakpoint('mobile')`
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   `}
+
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 `;
 
 const ProjectsPage = () => (
