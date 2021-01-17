@@ -1,8 +1,9 @@
-import React from 'react';
+import { find } from 'lodash';
+import Image from 'next/image';
 import PropTypes from 'prop-types';
+import React from 'react';
 import styled from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
-import { find } from 'lodash';
 
 const Wrapper = styled.div`
   display: flex;
@@ -21,10 +22,11 @@ const Wrapper = styled.div`
   `}
 `;
 
-const ProjectImage = styled.img`
+const ProjectImageWrapper = styled.div`
+  position: relative;
   width: 375px;
   height: 300px;
-  object-fit: cover;
+  overflow: hidden;
 `;
 
 const ProjectTitleContainer = styled.a`
@@ -49,12 +51,13 @@ function Project(props) {
 
   return (
     <Wrapper>
-      <ProjectImage
-        src={`/images/projects/${bannerFileName}`}
-        width={375}
-        height={300}
-        objectFit="cover"
-      />
+      <ProjectImageWrapper>
+        <Image
+          src={`/images/projects/${bannerFileName}`}
+          layout="fill"
+          objectFit="cover"
+        />
+      </ProjectImageWrapper>
       <ProjectTitleContainer href={url}>
         <ProjectTitle>{title}</ProjectTitle>
       </ProjectTitleContainer>

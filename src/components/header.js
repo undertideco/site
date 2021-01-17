@@ -1,7 +1,9 @@
+import Image from 'next/image';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
+
 import Button from './button';
 import StyledAnchor from './styled-anchor';
 import StyledLink from './styled-link';
@@ -18,10 +20,10 @@ const Wrapper = styled.header`
   justify-content: space-between;
 `;
 
-const Logo = styled.img`
+const LogoWrapper = styled.div`
+  position: relative;
   width: 50px;
   height: 50px;
-  object-fit: contain;
 `;
 
 const Menu = styled.div`
@@ -66,7 +68,14 @@ const HireUsText = styled.span`
 const Header = () => (
   <Wrapper>
     <StyledLink href="/">
-      <Logo src="/logo.png" alt="Logo of Undertide" />
+      <LogoWrapper>
+        <Image
+          src="/logo.png"
+          layout="fill"
+          objectFit="contain"
+          alt="Logo of Undertide"
+        />
+      </LogoWrapper>
     </StyledLink>
     <Menu>
       <MenuLink href="/">Home</MenuLink>
