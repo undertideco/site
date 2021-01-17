@@ -1,30 +1,24 @@
-import React from 'react';
+import Image from 'next/image';
 import PropTypes from 'prop-types';
+import React from 'react';
 import styled from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
-import { find } from 'lodash';
 
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
   margin-bottom: 24px;
-
-  flex-basis: 100%;
-
-  ${breakpoint('tablet')`
-    flex-basis: calc(50% - .5rem - .5rem);
-  `}
-
-  ${breakpoint('desktop')`
-    flex-basis: calc(33% - .5rem - .5rem);
-  `}
 `;
 
-const ProjectImage = styled.img`
-  width: 375px;
+const ProjectImageWrapper = styled.div`
+  position: relative;
+  height: 250px;
+
+  ${breakpoint('desktop')`
   height: 300px;
-  object-fit: cover;
+  `}
+  overflow: hidden;
 `;
 
 const ProjectTitleContainer = styled.a`
@@ -49,12 +43,13 @@ function Project(props) {
 
   return (
     <Wrapper>
-      <ProjectImage
-        src={`/images/projects/${bannerFileName}`}
-        width={375}
-        height={300}
-        objectFit="cover"
-      />
+      <ProjectImageWrapper>
+        <Image
+          src={`/images/projects/${bannerFileName}`}
+          layout="fill"
+          objectFit="cover"
+        />
+      </ProjectImageWrapper>
       <ProjectTitleContainer href={url}>
         <ProjectTitle>{title}</ProjectTitle>
       </ProjectTitleContainer>

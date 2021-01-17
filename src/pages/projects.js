@@ -1,13 +1,12 @@
 import React from 'react';
-
 import styled from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import LargeTitle from '../components/large-title';
-import BodyText from '../components/body-text';
 
+import BodyText from '../components/body-text';
+import LargeTitle from '../components/large-title';
+import Layout from '../components/layout';
 import Project from '../components/project';
+import SEO from '../components/seo';
 
 const Wrapper = styled.div`
   padding: 32px 21px;
@@ -18,12 +17,15 @@ const Wrapper = styled.div`
 `;
 
 const ProjectGrid = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 45px 0px;
-  align-items: flex-start;
-  grid-row-gap: unset;
+  display: grid;
+  column-gap: 24px;
+  row-gap: 24px;
+
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+  ${breakpoint('desktop')`
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  `}
 `;
 
 const ProjectsPage = () => (
