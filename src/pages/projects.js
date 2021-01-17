@@ -21,11 +21,11 @@ const ProjectGrid = styled.div`
   column-gap: 24px;
   row-gap: 24px;
 
-  ${breakpoint('mobile')`
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  `}
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  ${breakpoint('desktop')`
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  `}
 `;
 
 const ProjectsPage = () => (

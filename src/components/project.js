@@ -2,6 +2,7 @@ import Image from 'next/image';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
+import { breakpoint } from 'styled-components-breakpoint';
 
 const Wrapper = styled.div`
   display: flex;
@@ -12,7 +13,11 @@ const Wrapper = styled.div`
 
 const ProjectImageWrapper = styled.div`
   position: relative;
-  height: 28vh;
+  height: 250px;
+
+  ${breakpoint('desktop')`
+  height: 300px;
+  `}
   overflow: hidden;
 `;
 
