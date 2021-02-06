@@ -6,7 +6,6 @@
   "author": "Undertide LLP <hello@undertide.co>",
   "license": "MIT",
   "devDependencies": {
-    "@netlify/plugin-nextjs": "^1.0.5",
     "@svgr/webpack": "^5.5.0",
     "@types/lodash": "^4.14.167",
     "@types/node": "^14.14.21",
