@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
@@ -38,17 +37,18 @@ const ProjectDetail = styled.span`
   margin-top: 2.5px;
 `;
 
+const Image = styled.img`
+  width: 100%;
+  object-fit: cover;
+`;
+
 function Project(props) {
   const { title, url, owner, tech, bannerFileName } = props;
 
   return (
     <Wrapper>
       <ProjectImageWrapper>
-        <Image
-          src={`/images/projects/${bannerFileName}`}
-          layout="fill"
-          objectFit="cover"
-        />
+        <Image src={`/images/projects/${bannerFileName}`} />
       </ProjectImageWrapper>
       <ProjectTitleContainer href={url}>
         <ProjectTitle>{title}</ProjectTitle>

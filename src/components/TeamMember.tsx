@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
@@ -21,6 +20,11 @@ const AvatarWrapper = styled.div`
   `}
   border-radius: 10px;
   margin-bottom: 1rem;
+`;
+
+const Image = styled.img`
+  width: 100%;
+  object-fit: cover;
 `;
 
 const Name = styled.h3`
@@ -55,7 +59,7 @@ const TeamMember: React.FC<Props> = function(props) {
   return (
     <Wrapper>
       <AvatarWrapper>
-        <Image src={avatar} layout="fill" objectFit="cover" />
+        <Image src={avatar} />
       </AvatarWrapper>
       <Name>{name}</Name>
       <Bio>{bio}</Bio>

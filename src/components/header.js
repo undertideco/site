@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
@@ -72,16 +71,16 @@ const MobileHidden = styled.span`
   `}
 `;
 
+const Image = styled.img`
+  width: 100%;
+  object-fit: cover;
+`;
+
 const Header = () => (
   <Wrapper>
     <StyledLink href="/">
       <LogoWrapper>
-        <Image
-          src="/logo.png"
-          layout="fill"
-          objectFit="contain"
-          alt="Logo of Undertide"
-        />
+        <Image src="/logo.png" alt="Logo of Undertide" />
       </LogoWrapper>
     </StyledLink>
     <Menu>
