@@ -3,6 +3,3 @@
 
 [dev]
   command = "yarn dev"
-
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
