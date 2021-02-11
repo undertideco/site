@@ -12,6 +12,7 @@ import LargeTitle from '../components/large-title';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import TeamMember from '../components/TeamMember';
+import { readTeamMembers } from '../content';
 
 const Wrapper = styled.div`
   padding: 32px 21px;
@@ -43,15 +44,7 @@ const TeamMembersContainer = styled.div`
 `;
 
 interface Props {
-  teamMembers: {
-    name: string;
-    bio: string;
-    avatar: string;
-    social: {
-      url: string;
-    }[];
-    founder?: boolean;
-  }[];
+  teamMembers: App.TeamMember[];
 }
 
 const TeamPage: React.FC<Props> = function(props) {
@@ -91,20 +84,7 @@ const TeamPage: React.FC<Props> = function(props) {
 export default TeamPage;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const dir = path.join(process.cwd(), 'content/team_members');
-
-  const files = fs.readdirSync(dir).filter(file => file.endsWith('.mdx'));
-
-  const teamMembers = [];
-
-  for (const file of files) {
-    const filePath = path.join(dir, file);
-    const fileData = fs.readFileSync(filePath);
-
-    const parsedData = matter(fileData);
-
-    teamMembers.push(parsedData.data);
-  }
+  const teamMembers = readTeamMembers();
 
   return { props: { teamMembers } };
 };

@@ -1,5 +1,6 @@
 import fs from 'fs';
 import matter from 'gray-matter';
+import { keyBy } from 'lodash';
 import { GetStaticProps } from 'next';
 import path from 'path';
 import React from 'react';
@@ -11,6 +12,7 @@ import LargeTitle from '../components/large-title';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import StyledLink from '../components/styled-link';
+import { readBlogPosts, readTeamMembers } from '../content';
 
 const Wrapper = styled.div`
   padding: 32px 21px;
@@ -21,7 +23,7 @@ const Wrapper = styled.div`
 `;
 
 interface Props {
-  posts: App.BlogPost[];
+  posts: (App.BlogPost & { author: App.TeamMember | null })[];
 }
 
 const BlogPage: React.FC<Props> = function(props) {
@@ -45,23 +47,14 @@ const BlogPage: React.FC<Props> = function(props) {
 export default BlogPage;
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
-  const dir = path.join(process.cwd(), 'content/blog_posts');
+  const blogPosts = readBlogPosts();
+  const teamMembers = readTeamMembers();
+  const teamMembersKeyed = keyBy(teamMembers, 'name');
 
-  const files = fs.readdirSync(dir).filter(file => file.endsWith('.mdx'));
-
-  const posts: App.BlogPost[] = [];
-
-  for (const file of files) {
-    const fileData = fs.readFileSync(path.join(dir, file));
-
-    const parsedData = matter(fileData);
-
-    posts.push({
-      //@ts-ignore
-      data: parsedData.data,
-      content: parsedData.content,
-    });
-  }
+  const posts = blogPosts.map(post => ({
+    ...post,
+    author: teamMembersKeyed[post.data.author] ?? null,
+  }));
 
   return { props: { posts } };
 };

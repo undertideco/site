@@ -2,36 +2,52 @@ import moment from 'moment';
 import React from 'react';
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
-  border: 1px solid #000;
-  padding: 16px;
-`;
+import BlogAuthor from './BlogAuthor';
 
 const Title = styled.h1``;
 
+const Wrapper = styled.div`
+  border: 1px solid #000;
+  padding: 16px;
+  color: #0c2741;
+
+  &:hover {
+    ${Title} {
+      text-decoration: underline;
+    }
+  }
+`;
+
 const Excerpt = styled.p``;
 
-const Author = styled.span``;
+const Metadata = styled.div`
+  display: flex;
+  align-items: center;
+`;
 
-const Timestamp = styled.time``;
+const Timestamp = styled.time`
+  margin-left: 16px;
+`;
 
 interface Props {
-  post: App.BlogPost;
+  post: App.BlogPost & { author: App.TeamMember | null };
 }
 
 const BlogPostBlock: React.FC<Props> = function(props) {
   const { post } = props;
-  const { data } = post;
-  const { title, published_at, excerpt, author } = data;
+  const { data, author } = post;
+  const { title, published_at, excerpt } = data;
 
   return (
     <Wrapper>
       <Title>{title}</Title>
       <Excerpt>{excerpt}</Excerpt>
-      <Author>{author}</Author>
-      <Timestamp dateTime={published_at}>
-        {moment(published_at).fromNow()}
-      </Timestamp>
+      <Metadata>
+        {author !== null && <BlogAuthor author={author} />}
+        <Timestamp dateTime={published_at}>
+          {moment(published_at).fromNow()}
+        </Timestamp>
+      </Metadata>
     </Wrapper>
   );
 };
