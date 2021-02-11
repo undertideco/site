@@ -41,6 +41,7 @@
     "next": "^10.0.4",
     "parcel-bundler": "^1.11.0",
     "prettier": "^1.19.1",
+    "prism-react-renderer": "^1.1.1",
     "prop-types": "^15.7.2",
     "proper-lockfile": "^4.1.2",
     "raw-loader": "^4.0.2",
