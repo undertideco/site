@@ -16,6 +16,7 @@ import Layout from '../../components/Layout';
 import MDX from '../../components/MDX';
 import SEO from '../../components/SEO';
 import { readTeamMembers } from '../../content';
+import mdxComponents from '../../mdxComponents';
 
 const Wrapper = styled.div`
   padding: 32px 21px;
@@ -59,7 +60,7 @@ const BlogTemplatePage: React.FC<Props> = function(props) {
             {moment(published_at).fromNow()}
           </Timestamp>
         </Metadata>
-        <MDX>{content}</MDX>
+        <MDX components={mdxComponents}>{content}</MDX>
       </Wrapper>
     </Layout>
   );
