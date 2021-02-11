@@ -89,6 +89,7 @@ const Header = () => (
       <MenuLink href="/meet-the-team">
         <MobileHidden>Meet the</MobileHidden> Team
       </MenuLink>
+      <MenuLink href="/blog">Blog</MenuLink>
       <StyledAnchor href="mailto:hello@undertide.co">
         <HireUsText>Hire Us</HireUsText>
         <WorkTogetherButton>Let&apos;s Work Together</WorkTogetherButton>
