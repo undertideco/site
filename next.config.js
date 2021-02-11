@@ -10,6 +10,8 @@ module.exports = {
       use: 'raw-loader',
     });
 
+    config.node.fs = 'empty';
+
     return config;
   },
   experimental: {
