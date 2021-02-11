@@ -91,18 +91,16 @@ const TeamPage: React.FC<Props> = function(props) {
 export default TeamPage;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const teamMembersDir = path.join(process.cwd(), 'content/team_members');
+  const dir = path.join(process.cwd(), 'content/team_members');
 
-  const files = fs
-    .readdirSync(teamMembersDir)
-    .filter(file => file.endsWith('.md'));
+  const files = fs.readdirSync(dir).filter(file => file.endsWith('.mdx'));
 
   const teamMembers = [];
 
   for (const file of files) {
-    const { default: fileData } = await import(
-      `../../content/team_members/${file}`
-    );
+    const filePath = path.join(dir, file);
+    const fileData = fs.readFileSync(filePath);
+
     const parsedData = matter(fileData);
 
     teamMembers.push(parsedData.data);
