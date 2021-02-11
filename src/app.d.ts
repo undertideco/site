@@ -9,4 +9,14 @@ declare namespace App {
     };
     content: string;
   }
+
+  interface TeamMember {
+    name: string;
+    bio: string;
+    avatar: string;
+    social: {
+      url: string;
+    }[];
+    founder?: boolean;
+  }
 }
