@@ -62,7 +62,10 @@ const SEO: React.FC<Props> = function(props) {
         content={`Make your ideas a reality. | ${siteMetadata.title}`}
       />
       <meta name="twitter:description" content={metaDescription} />
-      <script type="application/ld+json">{JSON.stringify(jsonLDSchema)}</script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLDSchema) }}
+      ></script>
     </Head>
   );
 };
