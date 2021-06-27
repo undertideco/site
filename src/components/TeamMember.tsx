@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
@@ -22,7 +23,7 @@ const AvatarWrapper = styled.div`
   margin-bottom: 1rem;
 `;
 
-const Image = styled.img`
+const ProfileImage = styled(Image)`
   width: 100%;
   object-fit: cover;
 `;
@@ -40,15 +41,7 @@ const Bio = styled.span`
 `;
 
 interface Props {
-  member: {
-    name: string;
-    bio: string;
-    avatar: string;
-    social: {
-      url: string;
-    }[];
-    founder?: boolean;
-  };
+  member: App.TeamMember;
 }
 
 const TeamMember: React.FC<Props> = function (props) {
@@ -59,7 +52,7 @@ const TeamMember: React.FC<Props> = function (props) {
   return (
     <Wrapper>
       <AvatarWrapper>
-        <Image src={avatar} />
+        <ProfileImage layout="fill" src={avatar} />
       </AvatarWrapper>
       <Name>{name}</Name>
       <Bio>{bio}</Bio>
