@@ -1,7 +1,8 @@
+import { useRouter } from 'next/router';
 import React from 'react';
 import styled from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
-import { useRouter } from 'next/router';
+
 import Button from './button';
 import StyledAnchor from './styled-anchor';
 

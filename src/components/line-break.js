@@ -1,5 +1,5 @@
-import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
+import styled, { css } from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
 
 const LineBreak = styled.br`
