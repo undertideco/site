@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import Image from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
@@ -37,18 +37,29 @@ const ProjectDetail = styled.span`
   margin-top: 2.5px;
 `;
 
-const Image = styled.img`
+const ProjectImage = styled(Image)`
   width: 100%;
   object-fit: cover;
 `;
 
-function Project(props) {
+interface Props {
+  bannerFileName: string;
+  owner: string;
+  tech: string;
+  title: string;
+  url?: string;
+}
+
+const Project: React.FC<Props> = function(props) {
   const { title, url, owner, tech, bannerFileName } = props;
 
   return (
     <Wrapper>
       <ProjectImageWrapper>
-        <Image src={`/images/projects/${bannerFileName}`} />
+        <ProjectImage
+          layout="fill"
+          src={`/images/projects/${bannerFileName}`}
+        />
       </ProjectImageWrapper>
       <ProjectTitleContainer href={url}>
         <ProjectTitle>{title}</ProjectTitle>
@@ -57,18 +68,6 @@ function Project(props) {
       <ProjectDetail>{tech}</ProjectDetail>
     </Wrapper>
   );
-}
-
-Project.defaultProps = {
-  url: null,
-};
-
-Project.propTypes = {
-  title: PropTypes.string.isRequired,
-  url: PropTypes.string,
-  bannerFileName: PropTypes.string.isRequired,
-  owner: PropTypes.string.isRequired,
-  tech: PropTypes.string.isRequired,
 };
 
 export default Project;
