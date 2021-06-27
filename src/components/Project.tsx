@@ -15,9 +15,8 @@ const ProjectImageWrapper = styled.div`
   height: 250px;
 
   ${breakpoint('desktop')`
-  height: 300px;
+    height: 300px;
   `}
-  overflow: hidden;
 `;
 
 const ProjectTitleContainer = styled.a`
@@ -50,7 +49,7 @@ interface Props {
   url?: string;
 }
 
-const Project: React.FC<Props> = function(props) {
+const Project: React.FC<Props> = function (props) {
   const { title, url, owner, tech, bannerFileName } = props;
 
   return (
@@ -58,6 +57,7 @@ const Project: React.FC<Props> = function(props) {
       <ProjectImageWrapper>
         <ProjectImage
           layout="fill"
+          sizes="(max-width: 800px) 384px, (max-width: 900px) 640px, (max-width: 1200px) 384px, (min-width: 1200px) 640px"
           src={`/images/projects/${bannerFileName}`}
         />
       </ProjectImageWrapper>

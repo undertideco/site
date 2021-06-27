@@ -16,8 +16,8 @@ const AvatarWrapper = styled.div`
   height: 100px;
 
   ${breakpoint('desktop')`
-  width: 150px;
-  height: 150px;
+    width: 150px;
+    height: 150px;
   `}
   border-radius: 10px;
   margin-bottom: 1rem;
@@ -52,7 +52,11 @@ const TeamMember: React.FC<Props> = function (props) {
   return (
     <Wrapper>
       <AvatarWrapper>
-        <ProfileImage layout="fill" src={avatar} />
+        <ProfileImage
+          layout="fill"
+          sizes="(max-width: 750px) 384px, (max-width: 1200px) 128px, (min-width: 1200px) 384px"
+          src={avatar}
+        />
       </AvatarWrapper>
       <Name>{name}</Name>
       <Bio>{bio}</Bio>
