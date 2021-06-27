@@ -27,5 +27,6 @@ module.exports = {
     'sort-imports': 'off',
     'import/order': 'off',
     'react/prop-types': 'off',
+    '@typescript-eslint/ban-ts-comment': 'warn',
   },
 };
