@@ -39,7 +39,6 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-typed": "^1.2.0",
-    "sass": "^1.16.0",
     "styled-components": "^5.0.1",
     "styled-components-breakpoint": "^3.0.0-preview.20",
     "typed.js": "^2.0.9"
