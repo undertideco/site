@@ -12,5 +12,9 @@ module.exports = {
 
     return config;
   },
-  target: 'serverless',
+  experimental: {
+    styledComponents: true,
+  },
+
+  swcMinify: true,
 };
