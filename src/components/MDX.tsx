@@ -22,7 +22,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-import  { EvaluateOptions, evaluateSync } from '@mdx-js/mdx';
+import { EvaluateOptions, evaluateSync } from '@mdx-js/mdx';
 import * as provider from '@mdx-js/react';
 import type { MDXComponents } from 'mdx/types';
 import React from 'react';
@@ -39,7 +39,7 @@ interface Props extends Omit<EvaluateOptions, 'jsx' | 'jsxs' | 'Fragment'> {
   children: string;
 }
 
-const MDX: React.FC<Props> = function(props) {
+const MDX: React.FC<Props> = function (props) {
   const { components = {}, children, ...evalOptions } = props;
 
   const Component = React.useMemo(() => {
@@ -54,7 +54,7 @@ const MDX: React.FC<Props> = function(props) {
   }, [children, components, evalOptions]);
 
   if (Component == null) {
-    return <Error>An error occurred</Error>
+    return <Error>An error occurred</Error>;
   }
 
   return Component;

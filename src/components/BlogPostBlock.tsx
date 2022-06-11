@@ -33,7 +33,7 @@ interface Props {
   post: App.BlogPost & { author: App.TeamMember | null };
 }
 
-const BlogPostBlock: React.FC<Props> = function(props) {
+const BlogPostBlock: React.FC<Props> = function (props) {
   const { post } = props;
   const { data, author } = post;
   const { title, published_at, excerpt } = data;

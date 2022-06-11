@@ -13,7 +13,7 @@ interface Props {
   className?: string;
 }
 
-const CodeBlock: React.FC<React.PropsWithChildren<Props>> = function(props) {
+const CodeBlock: React.FC<React.PropsWithChildren<Props>> = function (props) {
   const { children, className } = props;
 
   const language = className?.replace(/language-/, '') ?? 'javascript';

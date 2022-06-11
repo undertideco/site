@@ -21,7 +21,7 @@ interface Props {
   author: App.TeamMember;
 }
 
-const BlogAuthor: React.FC<Props> = function(props) {
+const BlogAuthor: React.FC<Props> = function (props) {
   const { author } = props;
   const { name, avatar } = author;
 

@@ -51,7 +51,7 @@ interface Props {
   };
 }
 
-const TeamMember: React.FC<Props> = function(props) {
+const TeamMember: React.FC<Props> = function (props) {
   const { member } = props;
 
   const { name, bio, avatar, social } = member;

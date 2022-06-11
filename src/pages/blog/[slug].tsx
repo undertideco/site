@@ -43,7 +43,7 @@ interface Props {
   post: App.BlogPost & { author: App.TeamMember | null };
 }
 
-const BlogTemplatePage: React.FC<Props> = function(props) {
+const BlogTemplatePage: React.FC<Props> = function (props) {
   const { post } = props;
   const { data, content, author } = post;
   const { title, excerpt, published_at } = data;
@@ -108,7 +108,7 @@ export const getStaticProps: GetStaticProps<Props, Params> = async ({
 export const getStaticPaths: GetStaticPaths<Params> = async () => {
   const dir = path.join(process.cwd(), 'content/blog_posts');
 
-  const files = fs.readdirSync(dir).filter(file => file.endsWith('.mdx'));
+  const files = fs.readdirSync(dir).filter((file) => file.endsWith('.mdx'));
 
   const paths = [];
 

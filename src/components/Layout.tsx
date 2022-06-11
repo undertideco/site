@@ -4,7 +4,7 @@ import config from '../config';
 import Footer from './footer';
 import Header from './header';
 
-const Layout: React.FC<React.PropsWithChildren> = function(props) {
+const Layout: React.FC<React.PropsWithChildren> = function (props) {
   const { children } = props;
 
   return (

@@ -26,7 +26,7 @@ interface Props {
   posts: (App.BlogPost & { author: App.TeamMember | null })[];
 }
 
-const BlogPage: React.FC<Props> = function(props) {
+const BlogPage: React.FC<Props> = function (props) {
   const { posts } = props;
 
   return (
@@ -34,7 +34,7 @@ const BlogPage: React.FC<Props> = function(props) {
       <SEO title="Blog" />
       <Wrapper>
         <LargeTitle>Blog</LargeTitle>
-        {posts.map(post => (
+        {posts.map((post) => (
           <StyledLink key={post.data.slug} href={`/blog/${post.data.slug}`}>
             <BlogPostBlock post={post} />
           </StyledLink>
@@ -51,7 +51,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const teamMembers = readTeamMembers();
   const teamMembersKeyed = keyBy(teamMembers, 'name');
 
-  const posts = blogPosts.map(post => ({
+  const posts = blogPosts.map((post) => ({
     ...post,
     author: teamMembersKeyed[post.data.author] ?? null,
   }));

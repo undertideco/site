@@ -47,7 +47,7 @@ interface Props {
   teamMembers: App.TeamMember[];
 }
 
-const TeamPage: React.FC<Props> = function(props) {
+const TeamPage: React.FC<Props> = function (props) {
   const { teamMembers } = props;
 
   const teamMembersSorted: Props['teamMembers'] = useMemo(
@@ -72,7 +72,7 @@ const TeamPage: React.FC<Props> = function(props) {
           finest example of the whole being greater than the sum of its parts.
         </BodyText>
         <TeamMembersContainer>
-          {teamMembersSorted.map(teamMember => (
+          {teamMembersSorted.map((teamMember) => (
             <TeamMember key={teamMember.name} member={teamMember} />
           ))}
         </TeamMembersContainer>

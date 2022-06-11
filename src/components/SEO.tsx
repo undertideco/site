@@ -10,7 +10,7 @@ interface Props {
   title: string;
 }
 
-const SEO: React.FC<Props> = function(props) {
+const SEO: React.FC<Props> = function (props) {
   const { description, title } = props;
   const { siteMetadata } = config;
 

@@ -4,7 +4,7 @@ import { breakpoint } from 'styled-components-breakpoint';
 
 const LineBreak = styled.br`
   ${breakpoint('mobile')`
-    ${props =>
+    ${(props) =>
       props.mobile
         ? css`
             display: block;
@@ -14,8 +14,8 @@ const LineBreak = styled.br`
           `}
   `}
 
-${breakpoint('tablet')`
-    ${props =>
+  ${breakpoint('tablet')`
+    ${(props) =>
       props.tablet
         ? css`
             display: block;
@@ -26,7 +26,7 @@ ${breakpoint('tablet')`
   `}
 
 ${breakpoint('desktop')`
-    ${props =>
+    ${(props) =>
       props.desktop
         ? css`
             display: block;

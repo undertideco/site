@@ -13,7 +13,7 @@ export function readMDXFile(filePath: string) {
 export function readBlogPosts(): App.BlogPost[] {
   const dir = path.join(process.cwd(), 'content/blog_posts');
 
-  const files = fs.readdirSync(dir).filter(file => file.endsWith('.mdx'));
+  const files = fs.readdirSync(dir).filter((file) => file.endsWith('.mdx'));
 
   const posts: App.BlogPost[] = [];
 
@@ -34,7 +34,7 @@ export function readBlogPosts(): App.BlogPost[] {
 export function readTeamMembers(): App.TeamMember[] {
   const dir = path.join(process.cwd(), 'content/team_members');
 
-  const files = fs.readdirSync(dir).filter(file => file.endsWith('.mdx'));
+  const files = fs.readdirSync(dir).filter((file) => file.endsWith('.mdx'));
 
   const teamMembers = [];
 

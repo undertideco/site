@@ -23,7 +23,7 @@ export const SkillTitle = styled.span`
   font-size: 1em;
   font-weight: 700;
   text-transform: uppercase;
-  color: ${props => props.textColor};
+  color: ${(props) => props.textColor};
 
   ${breakpoint('desktop')`
     font-size: 16px;
