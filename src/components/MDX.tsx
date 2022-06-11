@@ -22,72 +22,42 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-// @ts-ignore
-import mdx from '@mdx-js/mdx';
-import { mdx as createElement, MDXProvider } from '@mdx-js/react';
-// @ts-ignore
-import { transform } from 'buble-jsx-only';
+import  { EvaluateOptions, evaluateSync } from '@mdx-js/mdx';
+import * as provider from '@mdx-js/react';
+import type { MDXComponents } from 'mdx/types';
 import React from 'react';
+import * as runtime from 'react/jsx-runtime';
 import styled from 'styled-components';
-
-const suffix = `return React.createElement(
-  MDXProvider,
-  {components},
-  React.createElement(MDXContent, props)
-)`;
 
 const Error = styled.pre`
   color: #e22424;
   display: block;
 `;
 
-interface Props {
-  scope?: any;
-  components?: { [name: string]: any };
-  remarkPlugins?: any[];
-  rehypePlugins?: any[];
+interface Props extends Omit<EvaluateOptions, 'jsx' | 'jsxs' | 'Fragment'> {
+  components?: MDXComponents;
+  children: string;
 }
 
-const MDX: React.FC<Props> = function({
-  scope = {},
-  components = {},
-  remarkPlugins = [],
-  rehypePlugins = [],
-  children,
-  ...props
-}) {
-  const fullScope = {
-    mdx: createElement,
-    MDXProvider,
-    components,
-    props,
-    ...scope,
-  };
+const MDX: React.FC<Props> = function(props) {
+  const { components = {}, children, ...evalOptions } = props;
 
-  let jsx;
+  const Component = React.useMemo(() => {
+    // @ts-ignore
+    const { default: MDXComponent } = evaluateSync(children, {
+      ...provider,
+      ...runtime,
+      ...evalOptions,
+    });
 
-  try {
-    jsx = mdx
-      .sync(children, {
-        remarkPlugins,
-        rehypePlugins,
-        skipExport: true,
-        commonmark: true,
-      })
-      .trim();
-  } catch (e) {
+    return <MDXComponent components={components} />;
+  }, [children, components, evalOptions]);
+
+  if (Component == null) {
     return <Error>An error occurred: {e.message}</Error>;
   }
 
-  const code = transform(jsx, { objectAssign: 'Object.assign' }).code;
-
-  const keys = Object.keys(fullScope);
-  const values = Object.values(fullScope);
-
-  // eslint-disable-next-line no-new-func
-  const fn = new Function('React', ...keys, `${code}\n\n${suffix}`);
-
-  return fn(React, ...values);
+  return Component;
 };
 
 export default MDX;
