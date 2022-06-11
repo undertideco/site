@@ -42,7 +42,7 @@
     "next": "^12.1.6",
     "next-sitemap": "^3.0.5",
     "path-browserify": "^1.0.1",
-    "prettier": "^1.19.1",
+    "prettier": "^2.6.2",
     "prism-react-renderer": "^1.1.1",
     "prop-types": "^15.7.2",
     "proper-lockfile": "^4.1.2",
