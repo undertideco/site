@@ -1,8 +1,5 @@
-import fs from 'fs';
-import matter from 'gray-matter';
 import { keyBy } from 'lodash';
 import { GetStaticProps } from 'next';
-import path from 'path';
 import React from 'react';
 import styled from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
@@ -22,6 +19,18 @@ const Wrapper = styled.div`
    `}
 `;
 
+const List = styled.ul`
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+`;
+
+const ListItem = styled.li``;
+
 interface Props {
   posts: (App.BlogPost & { author: App.TeamMember | null })[];
 }
@@ -34,11 +43,15 @@ const BlogPage: React.FC<Props> = function (props) {
       <SEO title="Blog" />
       <Wrapper>
         <LargeTitle>Blog</LargeTitle>
-        {posts.map((post) => (
-          <StyledLink key={post.data.slug} href={`/blog/${post.data.slug}`}>
-            <BlogPostBlock post={post} />
-          </StyledLink>
-        ))}
+        <List>
+          {posts.map((post) => (
+            <ListItem key={post.data.slug}>
+              <StyledLink href={`/blog/${post.data.slug}`}>
+                <BlogPostBlock post={post} />
+              </StyledLink>
+            </ListItem>
+          ))}
+        </List>
       </Wrapper>
     </Layout>
   );

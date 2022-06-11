@@ -4,11 +4,12 @@ import styled from 'styled-components';
 
 import BlogAuthor from './BlogAuthor';
 
-const Title = styled.h1``;
+const Title = styled.h1`
+  margin: 0;
+`;
 
 const Wrapper = styled.div`
-  border: 1px solid #000;
-  padding: 16px;
+  padding: 16px 0;
   color: #0c2741;
 
   &:hover {
