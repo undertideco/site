@@ -35,7 +35,6 @@
     "@mdx-js/react": "^2.1.1",
     "@types/moment": "^2.13.0",
     "@types/proper-lockfile": "^4.1.1",
-    "buble-jsx-only": "^0.19.8",
     "gray-matter": "^4.0.2",
     "lodash": "^4.17.21",
     "moment": "^2.29.1",
