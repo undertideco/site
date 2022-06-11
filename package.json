@@ -45,7 +45,7 @@
     "prop-types": "^15.7.2",
     "proper-lockfile": "^4.1.2",
     "raw-loader": "^4.0.2",
-    "react": "^17.0.2",
+    "react": "^18.1.0",
     "react-dom": "^17.0.2",
     "react-typed": "^1.2.0",
     "styled-components": "^5.0.1",
