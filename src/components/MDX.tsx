@@ -54,7 +54,7 @@ const MDX: React.FC<Props> = function(props) {
   }, [children, components, evalOptions]);
 
   if (Component == null) {
-    return <Error>An error occurred: {e.message}</Error>;
+    return <Error>An error occurred</Error>
   }
 
   return Component;

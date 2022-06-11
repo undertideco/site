@@ -12,7 +12,7 @@ interface Props {
   className?: string;
 }
 
-const StyledLink: React.FC<Props> = function(props) {
+const StyledLink: React.FC<React.PropsWithChildren<Props>> = function(props) {
   const { href, children, className } = props;
 
   return (
