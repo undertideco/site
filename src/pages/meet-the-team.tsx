@@ -12,6 +12,7 @@ import LargeTitle from '../components/large-title';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import TeamMember from '../components/TeamMember';
+import { readTeamMembers } from '../content';
 
 const Wrapper = styled.div`
   padding: 32px 21px;
@@ -43,18 +44,10 @@ const TeamMembersContainer = styled.div`
 `;
 
 interface Props {
-  teamMembers: {
-    name: string;
-    bio: string;
-    avatar: string;
-    social: {
-      url: string;
-    }[];
-    founder?: boolean;
-  }[];
+  teamMembers: App.TeamMember[];
 }
 
-const TeamPage: React.FC<Props> = function(props) {
+const TeamPage: React.FC<Props> = function (props) {
   const { teamMembers } = props;
 
   const teamMembersSorted: Props['teamMembers'] = useMemo(
@@ -79,7 +72,7 @@ const TeamPage: React.FC<Props> = function(props) {
           finest example of the whole being greater than the sum of its parts.
         </BodyText>
         <TeamMembersContainer>
-          {teamMembersSorted.map(teamMember => (
+          {teamMembersSorted.map((teamMember) => (
             <TeamMember key={teamMember.name} member={teamMember} />
           ))}
         </TeamMembersContainer>
@@ -91,22 +84,7 @@ const TeamPage: React.FC<Props> = function(props) {
 export default TeamPage;
 
 export const getStaticProps: GetStaticProps = async () => {
-  const teamMembersDir = path.join(process.cwd(), 'content/team_members');
-
-  const files = fs
-    .readdirSync(teamMembersDir)
-    .filter(file => file.endsWith('.md'));
-
-  const teamMembers = [];
-
-  for (const file of files) {
-    const { default: fileData } = await import(
-      `../../content/team_members/${file}`
-    );
-    const parsedData = matter(fileData);
-
-    teamMembers.push(parsedData.data);
-  }
+  const teamMembers = readTeamMembers();
 
   return { props: { teamMembers } };
 };
