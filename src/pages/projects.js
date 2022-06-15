@@ -5,7 +5,7 @@ import { breakpoint } from 'styled-components-breakpoint';
 import BodyText from '../components/body-text';
 import LargeTitle from '../components/large-title';
 import Layout from '../components/Layout';
-import Project from '../components/project';
+import Project from '../components/Project';
 import SEO from '../components/SEO';
 
 const Wrapper = styled.div`

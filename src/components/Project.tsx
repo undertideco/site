@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import Image from 'next/image';
 import React from 'react';
 import styled from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
@@ -15,9 +15,8 @@ const ProjectImageWrapper = styled.div`
   height: 250px;
 
   ${breakpoint('desktop')`
-  height: 300px;
+    height: 300px;
   `}
-  overflow: hidden;
 `;
 
 const ProjectTitleContainer = styled.a`
@@ -37,18 +36,30 @@ const ProjectDetail = styled.span`
   margin-top: 2.5px;
 `;
 
-const Image = styled.img`
+const ProjectImage = styled(Image)`
   width: 100%;
   object-fit: cover;
 `;
 
-function Project(props) {
+interface Props {
+  bannerFileName: string;
+  owner: string;
+  tech: string;
+  title: string;
+  url?: string;
+}
+
+const Project: React.FC<Props> = function (props) {
   const { title, url, owner, tech, bannerFileName } = props;
 
   return (
     <Wrapper>
       <ProjectImageWrapper>
-        <Image src={`/images/projects/${bannerFileName}`} />
+        <ProjectImage
+          layout="fill"
+          sizes="(max-width: 800px) 384px, (max-width: 900px) 640px, (max-width: 1200px) 384px, (min-width: 1200px) 640px"
+          src={`/images/projects/${bannerFileName}`}
+        />
       </ProjectImageWrapper>
       <ProjectTitleContainer href={url}>
         <ProjectTitle>{title}</ProjectTitle>
@@ -57,18 +68,6 @@ function Project(props) {
       <ProjectDetail>{tech}</ProjectDetail>
     </Wrapper>
   );
-}
-
-Project.defaultProps = {
-  url: null,
-};
-
-Project.propTypes = {
-  title: PropTypes.string.isRequired,
-  url: PropTypes.string,
-  bannerFileName: PropTypes.string.isRequired,
-  owner: PropTypes.string.isRequired,
-  tech: PropTypes.string.isRequired,
 };
 
 export default Project;
