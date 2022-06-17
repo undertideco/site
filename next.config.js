@@ -2,7 +2,7 @@ module.exports = {
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,
-      use: ['@svgr/webpack', 'url-loader'],
+      type: 'asset',
     });
 
     config.module.rules.push({
