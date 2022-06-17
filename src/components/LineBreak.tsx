@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components';
 
 interface LineBreakProps {
-  $mobile: boolean;
-  $tablet: boolean;
-  $desktop: boolean;
+  $mobile?: boolean;
+  $tablet?: boolean;
+  $desktop?: boolean;
 }
 
 const LineBreak = styled.br<LineBreakProps>`

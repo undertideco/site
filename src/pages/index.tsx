@@ -74,9 +74,9 @@ const IndexPage: React.FC = function () {
       <Hero>
         <StyledLargeTitle>
           Make your ideas&nbsp;
-          <LineBreak desktop tablet />
+          <LineBreak $desktop $tablet />
           a&nbsp;
-          <LineBreak mobile />
+          <LineBreak $mobile />
           <ReactTyped
             strings={['reality.', 'success.', 'delight.']}
             typeSpeed={40}
