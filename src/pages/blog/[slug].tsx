@@ -11,7 +11,7 @@ import { breakpoint } from 'styled-components-breakpoint';
 
 import { get, set } from '../../buildCache';
 import BlogAuthor from '../../components/BlogAuthor';
-import LargeTitle from '../../components/large-title';
+import LargeTitle from '../../components/LargeTitle';
 import Layout from '../../components/Layout';
 import MDX from '../../components/MDX';
 import SEO from '../../components/SEO';

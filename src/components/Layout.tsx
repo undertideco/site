@@ -1,8 +1,8 @@
 import React from 'react';
 
 import config from '../config';
-import Footer from './footer';
-import Header from './header';
+import Footer from './Footer';
+import Header from './Header';
 
 const Layout: React.FC<React.PropsWithChildren> = function (props) {
   const { children } = props;

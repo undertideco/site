@@ -3,8 +3,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
 
-import Button from './button';
-import StyledAnchor from './styled-anchor';
+import Button from './Button';
+import StyledAnchor from './StyledAnchor';
 
 const Wrapper = styled.footer`
   display: grid;
@@ -47,7 +47,7 @@ const Underline = styled.span`
   text-decoration: underline;
 `;
 
-function Footer() {
+const Footer: React.FC = function () {
   const router = useRouter();
   const isProjectsPage = router.pathname === '/projects';
 
@@ -69,6 +69,6 @@ function Footer() {
       </StyledAnchor>
     </Wrapper>
   );
-}
+};
 
 export default Footer;

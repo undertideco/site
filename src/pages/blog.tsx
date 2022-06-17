@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
 
 import BlogPostBlock from '../components/BlogPostBlock';
-import LargeTitle from '../components/large-title';
+import LargeTitle from '../components/LargeTitle';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import StyledLink from '../components/styled-link';

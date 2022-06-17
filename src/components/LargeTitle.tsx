@@ -12,7 +12,7 @@ const LargeTitle = styled.h1`
   ${breakpoint('tablet')`
   margin-top: 32px;
     font-size: 80px;
-    line-height: 1.2;
+    line-height: 1.2; 
   `}
 `;
 

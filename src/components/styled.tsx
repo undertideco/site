@@ -18,12 +18,12 @@ const Skill = styled.div`
 
 export const SkillIcon = styled.img``;
 
-export const SkillTitle = styled.span`
+export const SkillTitle = styled.span<{ $textColor: string }>`
   grid-area: title;
   font-size: 1em;
   font-weight: 700;
   text-transform: uppercase;
-  color: ${(props) => props.textColor};
+  color: ${(props) => props.$textColor};
 
   ${breakpoint('desktop')`
     font-size: 16px;

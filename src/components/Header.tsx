@@ -1,11 +1,10 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 import styled from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
 
-import Button from './button';
-import StyledAnchor from './styled-anchor';
+import Button from './Button';
 import StyledLink from './styled-link';
+import StyledAnchor from './StyledAnchor';
 
 const Wrapper = styled.header`
   margin: 32px 21px 0px 21px;
@@ -76,34 +75,32 @@ const Image = styled.img`
   object-fit: cover;
 `;
 
-const Header = () => (
-  <Wrapper>
-    <StyledLink href="/">
-      <LogoWrapper>
-        <Image src="/logo.png" alt="Logo of Undertide" />
-      </LogoWrapper>
-    </StyledLink>
-    <Menu>
-      <MenuLink href="/">Home</MenuLink>
-      <MenuLink href="/projects">Work</MenuLink>
-      <MenuLink href="/meet-the-team">
-        <MobileHidden>Meet the</MobileHidden> Team
-      </MenuLink>
-      <MenuLink href="/blog">Blog</MenuLink>
-      <StyledAnchor href="mailto:hello@undertide.co">
-        <HireUsText>Hire Us</HireUsText>
-        <WorkTogetherButton>Let&apos;s Work Together</WorkTogetherButton>
-      </StyledAnchor>
-    </Menu>
-  </Wrapper>
-);
+interface Props {
+  siteTitle?: string;
+}
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-Header.defaultProps = {
-  siteTitle: ``,
+const Header: React.FC<Props> = function (props) {
+  return (
+    <Wrapper>
+      <StyledLink href="/">
+        <LogoWrapper>
+          <Image src="/logo.png" alt="Logo of Undertide" />
+        </LogoWrapper>
+      </StyledLink>
+      <Menu>
+        <MenuLink href="/">Home</MenuLink>
+        <MenuLink href="/projects">Work</MenuLink>
+        <MenuLink href="/meet-the-team">
+          <MobileHidden>Meet the</MobileHidden> Team
+        </MenuLink>
+        <MenuLink href="/blog">Blog</MenuLink>
+        <StyledAnchor href="mailto:hello@undertide.co">
+          <HireUsText>Hire Us</HireUsText>
+          <WorkTogetherButton>Let&apos;s Work Together</WorkTogetherButton>
+        </StyledAnchor>
+      </Menu>
+    </Wrapper>
+  );
 };
 
 export default Header;

@@ -7,8 +7,8 @@ import React, { useMemo } from 'react';
 import styled from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
 
-import BodyText from '../components/body-text';
-import LargeTitle from '../components/large-title';
+import BodyText from '../components/BodyText';
+import LargeTitle from '../components/LargeTitle';
 import Layout from '../components/Layout';
 import SEO from '../components/SEO';
 import TeamMember from '../components/TeamMember';
