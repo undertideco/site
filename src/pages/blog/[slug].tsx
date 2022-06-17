@@ -6,6 +6,7 @@ import { GetStaticPaths, GetStaticProps } from 'next';
 import path from 'path';
 import { ParsedUrlQuery } from 'querystring';
 import React from 'react';
+import { BlogPosting, WithContext } from 'schema-dts';
 import styled from 'styled-components';
 import { breakpoint } from 'styled-components-breakpoint';
 
@@ -48,9 +49,23 @@ const BlogTemplatePage: React.FC<Props> = function (props) {
   const { data, content, author } = post;
   const { title, excerpt, published_at } = data;
 
+  const schemaBlogPost = React.useMemo<WithContext<BlogPosting>>(() => {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: title,
+      datePublished: published_at,
+      articleBody: content,
+      author: {
+        '@type': 'Person',
+        name: author?.name,
+      },
+    };
+  }, [author?.name, title]);
+
   return (
     <Layout>
-      <SEO title={title} />
+      <SEO title={title} schemas={[schemaBlogPost]} />
       <Wrapper>
         <LargeTitle>{title}</LargeTitle>
         <Excerpt>{excerpt}</Excerpt>

@@ -4,6 +4,7 @@ const config = {
     description: 'Undertide Apps is a software consultancy based in Singapore.',
     author: `@undertideco`,
     siteUrl: 'https://undertide.co',
+    contact: 'hello@undertide.co',
   },
 };
 

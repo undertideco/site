@@ -1,35 +1,41 @@
 import Head from 'next/head';
 import React from 'react';
-import { resolve } from 'url';
+import { Organization, Thing, WithContext } from 'schema-dts';
 
 import config from '../config';
+
+const { siteMetadata } = config;
 
 interface Props {
   lang?: string;
   description?: string;
   title: string;
+  image?: string;
+  schemas?: Thing[];
 }
 
 const SEO: React.FC<Props> = function (props) {
-  const { description, title } = props;
-  const { siteMetadata } = config;
+  const { description, title, image } = props;
+  const schemas = props.schemas ?? [];
 
   const metaDescription = description || siteMetadata.description;
 
-  const jsonLDSchema = {
+  const logoURL = new URL('logo-meta.png', siteMetadata.siteUrl).toString();
+
+  const schemaOrg: WithContext<Organization> = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Undertide Apps',
     description: metaDescription,
     url: siteMetadata.siteUrl,
-    logo: resolve(siteMetadata.siteUrl, 'logo-meta.png'),
+    logo: logoURL,
     sameAs: [
       'https://in.linkedin.com/company/undertide-apps',
       'https://twitter.com/undertideco',
     ],
     contactPoint: {
       '@type': 'ContactPoint',
-      email: 'hello@undertide.co',
+      email: siteMetadata.contact,
     },
   };
 
@@ -45,16 +51,10 @@ const SEO: React.FC<Props> = function (props) {
       />
       <meta name="og:description" content={metaDescription} />
       <meta name="og:type" content="website" />
-      <meta
-        name="og:image"
-        content={resolve(siteMetadata.siteUrl, 'logo-meta.png')}
-      />
+      <meta name="og:image" content={image ?? logoURL} />
       <meta name="og:url" content={siteMetadata.siteUrl} />
       <meta name="twitter:card" content={metaDescription} />
-      <meta
-        name="twitter:image"
-        content={resolve(siteMetadata.siteUrl, 'logo-meta.png')}
-      />
+      <meta name="twitter:image" content={image ?? logoURL} />
       <meta name="twitter:creator" content={siteMetadata.author} />
       <meta name="twitter:url" content={siteMetadata.siteUrl} />
       <meta
@@ -64,8 +64,19 @@ const SEO: React.FC<Props> = function (props) {
       <meta name="twitter:description" content={metaDescription} />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLDSchema) }}
-      ></script>
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaOrg) }}
+      />
+      {schemas.map((schema) => {
+        const __html = JSON.stringify(schema);
+
+        return (
+          <script
+            key={__html}
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html }}
+          />
+        );
+      })}
     </Head>
   );
 };
