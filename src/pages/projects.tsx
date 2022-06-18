@@ -40,6 +40,41 @@ const ProjectsPage: React.FC = function () {
         </BodyText>
         <ProjectGrid>
           <Project
+            bannerFileName="anything_good.jpg"
+            title="Anything Good Singapore"
+            url="https://anythinggood.sg"
+            owner="Love Action Project, C/L Studio, Soul Dot SG"
+            tech="SvelteKit"
+          />
+          <Project
+            bannerFileName="readfest.jpeg"
+            title="NLB ReadFest - The Curious Adventure of the Salaryman"
+            url="https://readfest.netlify.app"
+            owner="National Library Board (in partnership with In The Wild)"
+            tech="Next.js"
+          />
+          <Project
+            bannerFileName="courtney_barnett.jpg"
+            title="Courtney Barnett Archive"
+            url="https://courtneybarnett.live"
+            owner="Courtney Barnett (in partnership with Raphael Ong & Look Out Kid)"
+            tech="Gatsby"
+          />
+          <Project
+            bannerFileName="fingerplayers.jpeg"
+            title="The Finger Players"
+            url="https://fingerplayers.com"
+            owner="The Finger Players (in partnership with In The Wild)"
+            tech="Wordpress"
+          />
+          <Project
+            bannerFileName="sdea.jpeg"
+            title="Singapore Drama Educators Association"
+            url="https://sdea.org.sg"
+            owner="Singapore Drama Educators Association (in partnership with In The Wild)"
+            tech="Gatsby"
+          />
+          <Project
             bannerFileName="bside-city.jpg"
             title="B-side"
             url="https://b-side.city"
