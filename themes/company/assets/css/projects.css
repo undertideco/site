@@ -1,0 +1,68 @@
+.section-hero {
+  padding: 32px 21px 0px 21px;
+}
+
+.section-hero h1 {
+  margin: 0;
+}
+
+.section-hero p {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.container {
+  display: grid;
+  column-gap: 24px;
+  row-gap: 48px;
+  padding: 0px 21px 32px 21px;
+
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.project {
+  overflow: hidden;
+}
+
+.project .banner {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.project h2 {
+  font-size: 0.9rem;
+  color: #0c2741;
+  margin: 0;
+}
+
+.project p {
+  font-size: 0.9rem;
+  color: rgba(15, 59, 87, 70%);
+  line-height: 1.35;
+  margin: 2.5px 0;
+}
+
+@media (min-width: 768px) {
+  .section-hero {
+    padding: 40px 48px 0px 48px;
+  }
+
+  .section-hero p {
+    max-width: 671px;
+  }
+
+  .container {
+    padding: 8px 48px 40px 48px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+
+  .project .banner {
+    height: 300px;
+  }
+}

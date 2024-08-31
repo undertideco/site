@@ -1,0 +1,14 @@
+name = 'Company'
+license = 'UNLICENSED'
+licenselink = 'https://github.com/owner/repo/LICENSE'
+description = 'Theme description'
+min_version = "0.133.0"
+
+# Taxonomy terms
+tags = ['blog', 'company']
+features = ['some', 'awesome', 'features']
+
+authors = [
+  {name = 'Duncan Leo', homepage = 'https://duncanleo.me'},
+  {name = 'Jurvis Tan', homepage = 'https://jurv.is'}
+]

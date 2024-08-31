@@ -1,0 +1,127 @@
+.section-hero {
+  padding: 32px 21px 0px 21px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.section-hero h1 {
+  margin: 0;
+}
+
+.section-hero p {
+  font-weight: 300;
+  font-size: 1.25rem;
+}
+
+.section-hero .cta {
+  text-decoration: none;
+}
+
+.section-hero .cta .button {
+  background-color: #5286c7;
+}
+
+.section-hero .cta .button:hover {
+  background-color: #4d7fbd;
+}
+
+.section-skills {
+  background-color: white;
+  box-shadow: 8px 4px 4px 0 rgba(0, 0, 0, 0.1);
+  margin: 32px 0px;
+  padding: 32px 21px 32px 21px;
+}
+
+.section-skills h2 {
+  margin: 0;
+}
+
+.section-skills p {
+  font-weight: 300;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-areas:
+    'mobile'
+    'webdev'
+    'games';
+  row-gap: 14px;
+}
+
+.skill {
+  display: grid;
+  grid-template-areas:
+    'icon title'
+    'nada list';
+  grid-template-columns: 31px 1fr;
+  grid-row-gap: 5px;
+  grid-column-gap: 8px;
+  align-items: center;
+}
+
+.skill-title {
+  grid-area: title;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.skill-list {
+  grid-area: list;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skill-list-item {
+  color: #737272;
+  font-size: 1em;
+  line-height: 1.7em;
+}
+
+@media (min-width: 768px) {
+  .section-hero {
+    padding: 40px 48px 0px 48px;
+  }
+
+  .section-hero p {
+    max-width: 671px;
+  }
+
+  .section-skills {
+    margin: 64px 0;
+    padding: 3rem;
+  }
+
+  .skill-grid {
+    grid-template-areas:
+      'webdev games'
+      'mobile mobile';
+
+    row-gap: 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .skill-grid {
+    grid-template-areas:
+      "webdev games"
+      "mobile nada";
+    row-gap: 32px;
+  }
+
+  .skill {
+    row-gap: 8px;
+  }
+
+  .skill-title {
+    font-size: 16px;
+  }
+
+  .skill-list-item {
+    font-size: 16px;
+    line-height: 175%;
+  }
+}

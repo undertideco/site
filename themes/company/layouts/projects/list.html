@@ -1,0 +1,31 @@
+{{ define "main" }}
+  {{ .Content }}
+
+  <div class="container">
+    {{ range .Pages }}
+      <div class="project">
+        <img class="banner" src="{{ .Param "bannerFileName" }}" alt="">
+        {{ if isset .Params "externalurl" }}
+          <a href="{{ .Param "externalUrl" }}">
+            <h2>{{ .LinkTitle }}</h2>
+          </a>
+        {{ else }}
+          <h2>{{ .LinkTitle }}</h2>
+        {{ end }}
+        <p>{{ .Param "owner" }}</p>
+        <p>{{ .Param "tech" }}</p>
+        {{ .Summary }}
+      </div>
+    {{ end }}
+  </div>
+
+  {{- with resources.Get "css/projects.css" }}
+    {{- if eq hugo.Environment "development" }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{- else }}
+      {{- with . | minify | fingerprint }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{ end }}

@@ -1,0 +1,34 @@
+{{ define "main" }}
+  {{ .Content }}
+  <div class="container">
+    {{ range .Pages }}
+      <div class="blog-post-item">
+        <a href="{{ .RelPermalink }}">
+          <h2>{{ .LinkTitle }}</h2>
+        </a>
+        <p>{{ .Summary }}</p>
+
+        <div class="metadata">
+          {{ with .Param "author" | printf "/meet-the-team/%s" | .Site.GetPage }}
+            <div class="blog-author">
+              <img class="author-avatar" src="{{ .Param "avatar" }}" alt="">
+              <span>{{ .Param "title" }}</span>
+            </div>
+          {{ end }}
+
+          <time>{{ .Date | time.Format ":date_medium" }}</time>
+        </div>
+      </div>
+    {{ end }}
+  </div>
+
+  {{- with resources.Get "css/blog.css" }}
+    {{- if eq hugo.Environment "development" }}
+      <link rel="stylesheet" href="{{ .RelPermalink }}">
+    {{- else }}
+      {{- with . | minify | fingerprint }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+      {{- end }}
+    {{- end }}
+  {{- end }}
+{{ end }}
