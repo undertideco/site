@@ -1,6 +1,7 @@
 [build]
-  command = "yarn build"
-  publish = ".next"
+  command = "hugo"
+  publish = "public"
 
-[dev]
-  command = "yarn dev"
+[build.environment]
+  HUGO_VERSION = "0.133.0"
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
