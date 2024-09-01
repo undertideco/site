@@ -4,4 +4,6 @@ title="Open Event iOS"
   bannerFileName="/images/projects/open-event-ios.png"
   owner="FOSSAsia"
   tech="iOS, Design"
+[sitemap]
+  disable = true
 +++

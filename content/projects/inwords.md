@@ -5,4 +5,6 @@ title="Inwords"
   externalUrl="https://inwords.ai"
   owner="Symbiose Technologies"
   tech="iOS"
+[sitemap]
+  disable = true
 +++

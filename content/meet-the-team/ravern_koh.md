@@ -7,4 +7,6 @@ params:
     - url: https://github.com/ravern
     - url: https://twitter.com/ravernkoh
     - url: https://www.linkedin.com/in/ravern 
+sitemap:
+  disable: true
 ---

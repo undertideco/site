@@ -1,3 +1,7 @@
++++
+title = "DawnSlideshow Privacy Policy"
++++
+
 # DawnSlideshow Privacy Policy
 
 **Privacy Policy**

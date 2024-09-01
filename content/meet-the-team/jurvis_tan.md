@@ -9,4 +9,6 @@ params:
     - url: https://www.linkedin.com/in/jurvis-tan-6b386475
   featured: true
   founder: true
+sitemap:
+  disable: true
 ---

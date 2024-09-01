@@ -5,4 +5,6 @@ title="Our Shared Stories"
   externalUrl="https://www.nlb.gov.sg/Portals/0/Reports/fy17/"
   owner="National Library Board (in partnership with In The Wild)"
   tech="Web Design, Webflow"
+[sitemap]
+  disable = true
 +++

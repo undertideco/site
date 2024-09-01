@@ -9,4 +9,6 @@ params:
     - url: https://www.linkedin.com/in/chester-how
     - url: https://dribbble.com/chesterhow
     - url: https://www.behance.net/chesterhow
+sitemap:
+  disable: true
 ---

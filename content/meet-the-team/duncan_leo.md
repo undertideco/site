@@ -8,5 +8,7 @@ params:
     - url: https://twitter.com/duncanleo97
     - url: https://www.linkedin.com/in/duncan-leo-939800117/
   founder: true
+sitemap:
+  disable: true
 ---
 

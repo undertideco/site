@@ -5,4 +5,6 @@ title="Courtney Barnett Archive"
   externalUrl="https://courtneybarnett.live"
   owner="Courtney Barnett (in partnership with Raphael Ong & Look Out Kid)"
   tech="Gatsby"
+[sitemap]
+  disable = true
 +++

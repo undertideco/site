@@ -5,4 +5,6 @@ title="Trill Project - Find Your Supportive Community"
   externalUrl="https://trillproject.com"
   owner="Trill Project"
   tech="Android, Node"
+[sitemap]
+  disable = true
 +++

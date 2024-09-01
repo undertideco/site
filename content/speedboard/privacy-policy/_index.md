@@ -1,3 +1,7 @@
++++
+title = "SpeedBoard Privacy Policy"
++++
+
 # SpeedBoard Privacy Policy
 
 **Privacy Policy**

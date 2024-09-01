@@ -5,4 +5,6 @@ title="In The Wild Landing Site"
   externalUrl="https://www.weareinthewild.com"
   owner="in the wild"
   tech="Web Design, Webflow"
+[sitemap]
+  disable = true
 +++

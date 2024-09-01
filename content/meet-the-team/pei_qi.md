@@ -6,4 +6,6 @@ params:
   social:
     - url: https://github.com/kyurikotpq
     - url: https://linkedin.com/in/kyurikotpq 
+sitemap:
+  disable: true
 ---

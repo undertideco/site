@@ -5,4 +5,6 @@ title="Nebulo - Beautiful Smog Reports"
   externalUrl="https://nebulo.undertide.co"
   owner="Undertide Apps"
   tech="iOS, Android, Node, Go"
+[sitemap]
+  disable = true
 +++

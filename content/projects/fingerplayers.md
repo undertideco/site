@@ -5,4 +5,6 @@ title="The Finger Players"
   externalUrl="https://fingerplayers.com"
   owner="The Finger Players (in partnership with In The Wild)"
   tech="Wordpress"
+[sitemap]
+  disable = true
 +++

@@ -5,4 +5,6 @@ title="B-side"
   externalUrl="https://b-side.city"
   owner="in the wild"
   tech="Wordpress"
+[sitemap]
+  disable = true
 +++

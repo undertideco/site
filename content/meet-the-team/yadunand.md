@@ -7,4 +7,6 @@ params:
     - url: https://github.com/yadunut
     - url: https://twitter.com/yadunut
     - url: https://www.linkedin.com/in/yadunand-prem/
+sitemap:
+  disable: true
 ---

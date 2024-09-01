@@ -7,5 +7,7 @@ params:
     - url: https://github.com/taufiq
     - url: https://twitter.com/taufiqmmhd
     - url: https://sg.linkedin.com/in/taufiqmmhd
+sitemap:
+  disable: true
 ---
 

@@ -5,4 +5,6 @@ title="Harmany - Music Sharing Made Easy"
   externalUrl="https://harmany.me"
   owner="Undertide Apps"
   tech="iOS, Go"
+[sitemap]
+  disable = true
 +++

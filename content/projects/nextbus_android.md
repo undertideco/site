@@ -4,4 +4,6 @@ title="NextBus Android"
   bannerFileName="/images/projects/nextbus-android.png"
   owner="SG NextBus"
   tech="Android, Design"
+[sitemap]
+  disable = true
 +++
