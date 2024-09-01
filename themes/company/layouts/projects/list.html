@@ -2,7 +2,7 @@
   {{ .Content }}
 
   <div class="container">
-    {{ range .Pages }}
+    {{ range .Pages.ByDate.Reverse }}
       <div class="project">
         <img class="banner" src="{{ .Param "bannerFileName" }}" alt="">
         {{ if isset .Params "externalurl" }}
