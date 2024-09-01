@@ -14,14 +14,14 @@ header {
 .menu {
   display: grid;
   grid-auto-flow: column;
-  grid-column-gap: 20px;
+  column-gap: 12px;
   align-items: center;
 }
 
 .header-nav {
   display: grid;
   grid-auto-flow: column;
-  grid-column-gap: 20px;
+  column-gap: 12px;
   align-items: center;
 }
 
@@ -60,6 +60,14 @@ header {
 @media (min-width: 768px) {
   header {
     margin: 32px 3rem 0px 3rem;
+  }
+
+  .header-nav {
+    column-gap: 20px;
+  }
+
+  .menu {
+    column-gap: 20px;
   }
 
   .work-together .cta-mobile {
