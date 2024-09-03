@@ -1,0 +1,80 @@
+header {
+  margin: 32px 21px 0px 21px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.menu {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 12px;
+  align-items: center;
+}
+
+.header-nav {
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 12px;
+  align-items: center;
+}
+
+.header-nav a {
+  font-size: var(--fs-base);
+  color: #5f6b7a;
+  text-align: left;
+  text-decoration: none;
+}
+
+.header-nav a:hover {
+  text-decoration: underline;
+}
+
+.header-nav a.active {
+  font-weight: 700;
+}
+
+.work-together {
+  text-decoration: none;
+}
+
+.work-together .cta-mobile {
+  text-decoration-color: #f59369;
+  color: #f59369;
+  font-size: var(--fs-base);
+  text-decoration: underline;
+  line-height: 1;
+}
+
+.work-together .cta {
+  display: none;
+  width: 207px;
+}
+
+@media (min-width: 768px) {
+  header {
+    margin: 32px 3rem 0px 3rem;
+  }
+
+  .header-nav {
+    column-gap: 20px;
+  }
+
+  .menu {
+    column-gap: 20px;
+  }
+
+  .work-together .cta-mobile {
+    display: none;
+  }
+
+  .work-together .cta {
+    display: inline;
+  }
+}

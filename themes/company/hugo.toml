@@ -1,0 +1,28 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-US'
+title = 'My New Hugo Site'
+
+[[menus.main]]
+name = 'Home'
+pageRef = '/'
+weight = 10
+
+[[menus.main]]
+name = 'Work'
+pageRef = '/projects'
+weight = 20
+
+[[menus.main]]
+name = 'Meet the Team'
+pageRef = '/meet-the-team'
+weight = 30
+
+[[menus.main]]
+name = 'Blog'
+pageRef = '/blog'
+weight = 40
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.116.0"

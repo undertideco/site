@@ -1,0 +1,31 @@
+baseURL = 'https://undertide.co/'
+languageCode = 'en-us'
+title = 'Undertide Apps'
+theme = "company"
+disableKinds = ['taxonomy', 'term']
+
+[params]
+  description = 'Undertide Apps is a software consultancy based in Singapore.'
+  keywords = [
+  "Undertide",
+  "web development",
+  "mobile app development",
+  "game development",
+  "augmented reality",
+  "virtual reality",
+  "AR/VR solutions",
+  "Node.js development",
+  "React Native",
+  "Ruby on Rails",
+  "Unity game development",
+  "custom software development",
+  "mobile applications",
+  "technology solutions",
+  "app development company",
+  "software developers"
+]
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5

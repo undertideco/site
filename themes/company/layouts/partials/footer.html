@@ -1,0 +1,11 @@
+<h4>
+  {{ .Page.Param "footerTitle" | default "Now that we have introduced ourselves..." }}
+</h4>
+{{ with .Page.Param "footerSubtitle" }}
+  <p>{{ . | safeHTML }}</p>
+{{ end }}
+<a class="cta" href="mailto:hello@undertide.co">
+  <button class="button">
+    Build something together
+  </button>
+</a>

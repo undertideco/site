@@ -1,0 +1,13 @@
+{{ define "main" }}
+  {{ .Content }}
+  <div class="container">
+    {{ range .Pages.ByParam "founder" }}
+      <div class="team-member">
+      <img class="avatar" src="{{ .Param "avatar" }}" alt="">
+      <h2>{{ .LinkTitle }}</h2>
+      <span>{{ .Param "bio" }}</span>
+      {{ .Summary }}
+      </div>
+    {{ end }}
+  </div>
+{{ end }}

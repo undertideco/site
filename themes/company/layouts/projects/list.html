@@ -1,0 +1,21 @@
+{{ define "main" }}
+  {{ .Content }}
+
+  <div class="container">
+    {{ range .Pages.ByDate.Reverse }}
+      <div class="project">
+        <img class="banner" src="{{ .Param "bannerFileName" }}" alt="">
+        {{ if isset .Params "externalurl" }}
+          <a href="{{ .Param "externalUrl" }}">
+            <h2>{{ .LinkTitle }}</h2>
+          </a>
+        {{ else }}
+          <h2>{{ .LinkTitle }}</h2>
+        {{ end }}
+        <p>{{ .Param "owner" }}</p>
+        <p>{{ .Param "tech" }}</p>
+        {{ .Summary }}
+      </div>
+    {{ end }}
+  </div>
+{{ end }}
