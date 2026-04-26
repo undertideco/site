@@ -4,11 +4,14 @@ params:
   bio: Web Designer 
   avatar: /images/team_members/chester.jpeg
   social:
-    - url: https://github.com/chesterhow
-    - url: https://twitter.com/itsnotchester
-    - url: https://www.linkedin.com/in/chester-how
-    - url: https://dribbble.com/chesterhow
-    - url: https://www.behance.net/chesterhow
+    - platform: website
+      url: https://chester.how/
+    - platform: github
+      url: https://github.com/chesterhow
+    - platform: linkedin
+      url: https://www.linkedin.com/in/chester-how
+    - platform: x
+      url: https://twitter.com/itsnotchester
 sitemap:
   disable: true
 ---

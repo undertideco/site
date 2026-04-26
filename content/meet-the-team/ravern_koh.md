@@ -4,9 +4,14 @@ params:
   bio: Full-Stack Software Engineer 
   avatar: /images/team_members/ravern.jpeg
   social:
-    - url: https://github.com/ravern
-    - url: https://twitter.com/ravernkoh
-    - url: https://www.linkedin.com/in/ravern 
+    - platform: website
+      url: https://ravern.site/
+    - platform: github
+      url: https://github.com/ravern
+    - platform: linkedin
+      url: https://www.linkedin.com/in/ravern
+    - platform: x
+      url: https://twitter.com/ravernkoh
 sitemap:
   disable: true
 ---

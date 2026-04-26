@@ -4,8 +4,12 @@ params:
   bio: Designer and UI Developer
   avatar: /images/team_members/sean.jpeg
   social:
-    - url: https://github.com/seanlim
-    - url: https://twitter.com/seanlkx
+    - platform: website
+      url: https://sean.place/
+    - platform: github
+      url: https://github.com/seanlim
+    - platform: x
+      url: https://twitter.com/seanlkx
 sitemap:
   disable: true
 ---
